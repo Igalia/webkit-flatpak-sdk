@@ -1,0 +1,56 @@
+From 3f660c744765fe644273538d9b7b590af678f572 Mon Sep 17 00:00:00 2001
+From: Philippe Normand <philn@igalia.com>
+Date: Tue, 13 Aug 2019 10:03:44 +0100
+Subject: [PATCH] meson: New build option to enable/disable tests
+
+---
+ meson_options.txt |  1 +
+ test/meson.build  | 26 ++++++++++++++------------
+ 2 files changed, 15 insertions(+), 12 deletions(-)
+ create mode 100644 meson_options.txt
+
+diff --git a/meson_options.txt b/meson_options.txt
+new file mode 100644
+index 00000000..a2c14d16
+--- /dev/null
++++ b/meson_options.txt
+@@ -0,0 +1 @@
++option('tests', type : 'feature', value : 'auto', yield : true)
+diff --git a/test/meson.build b/test/meson.build
+index 58551569..acbdd934 100644
+--- a/test/meson.build
++++ b/test/meson.build
+@@ -1,15 +1,17 @@
+-gtest_main_dep = dependency('gtest', main : true, fallback: ['gtest', 'gtest_main_dep'], required: false)
+-gtest_dep = dependency('gtest', fallback: ['gtest', 'gtest_dep'], required: false)
++if not get_option('tests').disabled()
++  gtest_main_dep = dependency('gtest', main : true, fallback: ['gtest', 'gtest_main_dep'], required: false)
++  gtest_dep = dependency('gtest', fallback: ['gtest', 'gtest_dep'], required: false)
+ 
+-test_inc = include_directories('.')
++  test_inc = include_directories('.')
+ 
+-test_data_generator_sources = files('api/DataGenerator.cpp')
+-test_base_encoder_sources = files('api/BaseEncoderTest.cpp')
++  test_data_generator_sources = files('api/DataGenerator.cpp')
++  test_base_encoder_sources = files('api/BaseEncoderTest.cpp')
+ 
+-if gtest_dep.found()
+-  subdir('api')
+-  subdir('common')
+-  subdir('decoder')
+-  subdir('encoder')
+-  subdir('processing')
+-endif
++  if gtest_dep.found()
++    subdir('api')
++    subdir('common')
++    subdir('decoder')
++    subdir('encoder')
++    subdir('processing')
++  endif
++endif
+\ No newline at end of file
+-- 
+2.20.1
+

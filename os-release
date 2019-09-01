@@ -1,0 +1,4 @@
+NAME=WPE
+VERSION=master (Flatpak runtime)
+VERSION_ID=master
+ID=org.wpewebkit.Platform

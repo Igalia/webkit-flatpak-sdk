@@ -1,0 +1,55 @@
+{
+    "build-runtime": true,
+    "id": "org.wpewebkit.Sdk",
+    "id-platform": "org.wpewebkit.Platform",
+    "branch": "0.1",
+    "runtime": "org.freedesktop.Platform",
+    "sdk": "org.freedesktop.Sdk",
+    "runtime-version": "18.08",
+    "sdk-extensions": [ "org.freedesktop.Sdk.Locale", "org.freedesktop.Sdk.Docs" ],
+    "cleanup": [ "/cache",
+                 "/man",
+                 "*.la", "*.a" ],
+    "cleanup-commands": [ "/usr/libexec/freedesktop-post.sh" ],
+    "cleanup-platform": [ "/share/runtime/docs",
+                          "/include",
+                          "/share/aclocal",
+                          "/share/pkgconfig",
+                          "/lib/pkgconfig"
+                        ],
+    "cleanup-platform-commands": [ "/usr/libexec/freedesktop-post.sh" ],
+    "modules": [
+#include "org.webkit.CommonModules.json"
+#include "org.webkit.WPEModules.json"
+        {
+            "name": "os-release",
+            "sources": [
+                {
+                    "type": "file",
+                    "path": "os-release"
+                },
+                {
+                    "type": "file",
+                    "path": "issue"
+                },
+                {
+                    "type": "file",
+                    "path": "issue.net"
+                },
+                {
+                    "type": "file",
+                    "path": "org.wpewebkit.Sdk.appdata.xml"
+                },
+                {
+                    "type": "file",
+                    "path": "org.wpewebkit.Platform.appdata.xml"
+                },
+                {
+                    "type": "file",
+                    "path": "os-release-configure",
+                    "dest-filename": "configure"
+                }
+            ]
+        }
+    ]
+}
