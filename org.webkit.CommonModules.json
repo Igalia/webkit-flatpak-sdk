@@ -179,6 +179,29 @@
         ]
     },
     {
+        "name": "libsecret",
+        "sources": [
+            {
+                "type": "archive",
+                "url": "http://ftp.gnome.org/pub/GNOME/sources/libsecret/0.18/libsecret-0.18.8.tar.xz",
+                "sha256": "3bfa889d260e0dbabcf5b9967f2aae12edcd2ddc9adc365de7a5cc840c311d15"
+            }
+        ]
+    },
+    {
+        "name": "cairo",
+        "sources": [
+            {
+                "type": "archive",
+                "url": "https://cairographics.org/releases/cairo-1.16.0.tar.xz",
+                "sha256": "5e7b29b3f113ef870d1e3ecf8adf21f923396401604bda16d44be45e66052331"
+            },
+            {
+                "type": "patch",
+                "path": "gtk-patches/cairo-ft-Use-FT_Done_MM_Var-instead-of-free-when-available.patch"
+            }
+        ]
+    },
     {
         "name": "libopenh264",
         "buildsystem": "meson",
@@ -485,5 +508,32 @@
             }
         ],
         "buildsystem": "cmake-ninja"
+    },
+    {
+        "name": "libnotify",
+        "buildsystem": "meson",
+        "sources": [
+            {
+                "type": "archive",
+                "url": "http://ftp.gnome.org/pub/GNOME/sources/libnotify/0.7/libnotify-0.7.8.tar.xz",
+                "sha256": "69209e0b663776a00c7b6c0e560302a8dbf66b2551d55616304f240bba66e18c"
+            }
+        ],
+        "config-opts": [
+            "-Dtests=false",
+            "-Dintrospection=disabled",
+            "-Dgtk_doc=false",
+            "-Ddocbook_docs=disabled"
+        ]
+    },
+    {
+        "name": "enchant",
+        "sources": [
+            {
+                "type": "archive",
+                "url": "https://github.com/AbiWord/enchant/releases/download/v2.2.5/enchant-2.2.5.tar.gz",
+                "sha256": "ee8a663295c0e039b05d418af065ebcba9e539f785531e552e908030bec48164"
+            }
+        ]
     },
 
