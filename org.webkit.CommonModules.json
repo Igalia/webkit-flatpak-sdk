@@ -140,6 +140,46 @@
         ]
     },
     {
+        "name": "atk",
+        "buildsystem": "meson",
+        "sources": [
+            {
+                "type": "archive",
+                "url": "http://ftp.gnome.org/pub/GNOME/sources/atk/2.33/atk-2.33.3.tar.xz",
+                "sha256": "532d1081e87b9f0a8d71733101e791818442fa1896531621d1aecc189e1a4ffe"
+            }
+        ],
+        "config-opts": [
+            "-Dintrospection=false"
+        ]
+    },
+    {
+        "name": "at-spi2-core",
+        "buildsystem": "meson",
+        "sources": [
+            {
+                "type": "archive",
+                "url": "http://ftp.gnome.org/pub/GNOME/sources/at-spi2-core/2.33/at-spi2-core-2.33.2.tar.xz",
+                "sha256": "0e3f44707cccf9ec9098f84abdf91ea654c919eac3c688400f8d261383cc2abe"
+            }
+        ],
+        "config-opts": [
+            "-Dintrospection=no"
+        ]
+    },
+    {
+        "name": "at-spi2-atk",
+        "buildsystem": "meson",
+        "sources": [
+            {
+                "type": "archive",
+                "url": "http://ftp.gnome.org/pub/GNOME/sources/at-spi2-core/2.33/at-spi2-core-2.33.2.tar.xz",
+                "sha256": "0e3f44707cccf9ec9098f84abdf91ea654c919eac3c688400f8d261383cc2abe"
+            }
+        ]
+    },
+    {
+    {
         "name": "libopenh264",
         "buildsystem": "meson",
         "sources": [
