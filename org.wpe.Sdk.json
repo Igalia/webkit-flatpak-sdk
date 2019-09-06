@@ -7,15 +7,62 @@
     "sdk": "org.freedesktop.Sdk",
     "runtime-version": "18.08",
     "sdk-extensions": [ "org.freedesktop.Sdk.Locale", "org.freedesktop.Sdk.Docs" ],
+    "inherit-extensions": [
+        "org.freedesktop.Platform.Icontheme",
+        "org.gtk.Gtk3theme"
+    ],
+    "inherit-sdk-extensions": [
+        "org.freedesktop.Sdk.Extension"
+    ],
+    "add-extensions": {
+        "org.kde.KStyle" : {
+            "directory": "share/runtime/lib/plugins/",
+            "subdirectories": true,
+            "no-autodownload": true,
+            "version": "5.12",
+            "merge-dirs": "styles",
+            "download-if": "active-gtk-theme"
+        },
+        "org.kde.PlatformTheme" : {
+            "directory": "share/runtime/lib/plugins/",
+            "subdirectories": true,
+            "no-autodownload": true,
+            "version": "5.12",
+            "merge-dirs": "platformthemes",
+            "//TODO": "This is currently only used for gnome platform plugin and should be its own extension point",
+            "download-if": "on-xdg-desktop-GNOME;on-xdg-desktop-GNOME-classic"
+        },
+        "org.kde.WaylandDecoration" : {
+            "directory": "share/runtime/lib/plugins/",
+            "subdirectories": true,
+            "no-autodownload": true,
+            "version": "5.12",
+            "merge-dirs": "wayland-decoration-client",
+            "//TODO": "This is currently only used for gnome platform plugin and should be its own extension point",
+            "download-if": "on-xdg-desktop-GNOME;on-xdg-desktop-GNOME-classic"
+        }
+    },
+    "finish-args": [
+        "--env=XDG_DATA_DIRS=/usr/share:/usr/share/runtime/share:/run/host/share",
+        "--env=QT_PLUGIN_PATH=/usr/share/runtime/lib/plugins",
+        "--env=PATH=/usr/lib/ccache:/usr/bin",
+        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
+        "--filesystem=xdg-config/kdeglobals:ro",
+        "--filesystem=xdg-run/dconf",
+        "--filesystem=~/.config/dconf:ro",
+        "--persist=~/.ccache"
+    ],
     "cleanup": [ "/cache",
                  "/man",
-                 "*.la", "*.a" ],
+                 "*.la" ],
     "cleanup-commands": [ "/usr/libexec/freedesktop-post.sh" ],
     "cleanup-platform": [ "/share/runtime/docs",
                           "/include",
                           "/share/aclocal",
                           "/share/pkgconfig",
-                          "/lib/pkgconfig"
+                          "/lib/pkgconfig",
+                          "*.a",
+                          "*.cmake"
                         ],
     "cleanup-platform-commands": [ "/usr/libexec/freedesktop-post.sh" ],
     "modules": [
@@ -23,6 +70,16 @@
 #include "org.webkit.WPEModules.json"
         {
             "name": "os-release",
+            "post-install": [
+                "mkdir -p /usr/share/runtime/lib/plugins/",
+                "mkdir -p /usr/lib/ccache",
+                "ln -s /usr/bin/cc /usr/lib/ccache/cc",
+                "ln -s /usr/bin/c++ /usr/lib/ccache/c++",
+                "ln -s /usr/bin/clang /usr/lib/ccache/clang",
+                "ln -s /usr/bin/clang++ /usr/lib/ccache/clang++",
+                "ln -s /usr/bin/gcc /usr/lib/ccache/gcc",
+                "ln -s /usr/bin/g++ /usr/lib/ccache/g++"
+            ],
             "sources": [
                 {
                     "type": "file",
