@@ -227,7 +227,7 @@
             {
                 "type": "git",
                 "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer.git",
-                "branch": "1.16.0"
+                "branch": "1.16.1"
             }
         ],
         "config-opts": [
@@ -243,8 +243,16 @@
         "sources": [
             {
                 "type": "archive",
-                "url": "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.16.0.tar.xz",
-                "sha256": "4093aa7b51e28fb24dfd603893fead8d1b7782f088b05ed0f22a21ef176fb5ae"
+                "url": "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.16.1.tar.xz",
+                "sha256": "5c3cc489933d0597087c9bc6ba251c93693d64554bcc563539a084fa2d5fcb2b"
+            },
+            {
+                "type": "patch",
+                "path": "gstreamer-patches/gst-plugins-base-0001-playbin-Handle-error-message-with-redirection-indica.patch"
+            },
+            {
+                "type": "patch",
+                "path": "gstreamer-patches/gst-plugins-base-0001-glupload-Add-VideoMetas-and-GLSyncMeta-to-the-raw-up.patch"
             }
         ],
         "config-opts": [
@@ -261,11 +269,11 @@
             {
                 "type": "git",
                 "url": "https://gitlab.freedesktop.org/gstreamer/gst-plugins-good.git",
-                "branch": "1.16.0"
+                "branch": "1.16.1"
             },
             {
                 "type": "patch",
-                "path": "gstreamer-patches/gst-plugins-good-scaletempo-Advertise-interleaved-layout-in-caps-temp.patch"
+                "path": "gstreamer-patches/gst-plugins-good-qtdemux-Specify-REDIRECT-information-in-error-messag.patch"
             }
         ],
         "config-opts": [
@@ -299,7 +307,7 @@
             {
                 "type": "git",
                 "url": "https://anongit.freedesktop.org/git/gstreamer/gst-plugins-ugly",
-                "branch": "1.16.0"
+                "branch": "1.16.1"
             }
         ],
         "config-opts": [
@@ -313,7 +321,11 @@
             {
                 "type": "git",
                 "url": "https://gitlab.freedesktop.org/gstreamer/gst-plugins-bad.git",
-                "branch": "1.16.0"
+                "branch": "1.16.1"
+            },
+            {
+                "type": "patch",
+                "path": "gstreamer-patches/gst-plugins-bad-0001-h264parse-Post-a-WARNING-when-data-is-broken.patch"
             }
         ],
         "config-opts": [
@@ -379,8 +391,8 @@
         "sources": [
             {
                 "type": "archive",
-                "url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.16.0.tar.xz",
-                "sha256": "dfac119043a9cfdcacd7acde77f674ab172cf2537b5812be52f49e9cddc53d9a"
+                "url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.16.1.tar.xz",
+                "sha256": "e8a5748ae9a4a7be9696512182ea9ffa6efe0be9b7976916548e9d4381ca61c4"
             }
         ],
         "config-opts": [
