@@ -5,9 +5,10 @@
     "branch": "0.1",
     "runtime": "org.freedesktop.Platform",
     "sdk": "org.freedesktop.Sdk",
-    "runtime-version": "18.08",
+    "runtime-version": "19.08",
     "sdk-extensions": [ "org.freedesktop.Sdk.Locale", "org.freedesktop.Sdk.Docs" ],
     "inherit-extensions": [
+        "org.freedesktop.Platform.GL",
         "org.freedesktop.Platform.Icontheme",
         "org.gtk.Gtk3theme"
     ],
