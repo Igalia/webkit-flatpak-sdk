@@ -608,16 +608,12 @@
         "sources": [
             {
                 "type": "archive",
-                "url": "http://download.qt.io/archive/qt/5.12/5.12.4/submodules/qtbase-everywhere-src-5.12.4.tar.xz",
-                "sha256": "20fbc7efa54ff7db9552a7a2cdf9047b80253c1933c834f35b0bc5c1ae021195"
+                "url": "http://download.qt.io/archive/qt/5.13/5.13.1/submodules/qtbase-everywhere-src-5.13.1.tar.xz",
+                "sha256": "110cd08cdacab26274bf2519d3508046616c0b638f0d2f5e00bc8bad87469eab"
             },
             {
                 "type": "patch",
                 "path": "qt-patches/qtbase-avoid-hardcoding-kernel-version.patch"
-            },
-            {
-                "type": "patch",
-                "path": "qt-patches/qtbase-revert-reset-qwidget-winid-when-backing-window-surface-destroyed.patch"
             },
             {
                 "type": "patch",
@@ -644,8 +640,12 @@
         "sources": [
             {
                 "type": "archive",
-                "url": "http://download.qt.io/archive/qt/5.12/5.12.4/submodules/qtdeclarative-everywhere-src-5.12.4.tar.xz",
-                "sha256": "614105ed73079d67d81b34fef31c9934c5e751342e4b2e0297128c8c301acda7"
+                "url": "http://download.qt.io/archive/qt/5.13/5.13.1/submodules/qtdeclarative-everywhere-src-5.13.1.tar.xz",
+                "sha256": "ae3477401b13d6b31e8569629d3f73b3e81e27cec27595988ffd320eaec7f0e2"
+            },
+            {
+                "type": "patch",
+                "path": "qt-patches/qtdeclarative-use-python3.patch"
             }
         ]
     },
@@ -656,8 +656,8 @@
         "sources": [
             {
                 "type": "archive",
-                "url": "http://download.qt.io/archive/qt/5.12/5.12.4/submodules/qtquickcontrols-everywhere-src-5.12.4.tar.xz",
-                "sha256": "32d4c2505337c67b0bac26d7f565ec8fabdc616e61247e98674820769dda9858"
+                "url": "http://download.qt.io/archive/qt/5.13/5.13.1/submodules/qtquickcontrols-everywhere-src-5.13.1.tar.xz",
+                "sha256": "5f3dd9a7c25aabe7a21ed7d137c23e2bfff948fefe94b183b5dee1a13667eb9b"
             }
         ]
     },
@@ -668,8 +668,8 @@
         "sources": [
             {
                 "type": "archive",
-                "url": "http://download.qt.io/archive/qt/5.12/5.12.4/submodules/qtquickcontrols2-everywhere-src-5.12.4.tar.xz",
-                "sha256": "9a447eed38bc8c7d7be7bc407317f58940377c077ddca74c9a641b1ee6200331"
+                "url": "http://download.qt.io/archive/qt/5.13/5.13.1/submodules/qtquickcontrols2-everywhere-src-5.13.1.tar.xz",
+                "sha256": "47df5a0d9b65bd6d06fc7edc2a93fba679249d4942163230a72ff6f3cc9f7ab8"
             }
         ]
     },
@@ -680,32 +680,8 @@
         "sources": [
             {
                 "type": "archive",
-                "url": "http://download.qt.io/archive/qt/5.12/5.12.4/submodules/qtwayland-everywhere-src-5.12.4.tar.xz",
-                "sha256": "2fade959c3927687134c597d85c12ba1af22129a60ab326c2dc77a648e74e6b7"
-            },
-            {
-                "type": "patch",
-                "path": "qt-patches/qtwayland-fix-stuttering-when-gui-thread-is-busy.patch"
-            },
-            {
-                "type": "patch",
-                "path": "qt-patches/qtwayland-reset-frame-callback-timer-when-hiding-window.patch"
-            },
-            {
-                "type": "patch",
-                "path": "qt-patches/qtwayland-emit-wl-surfare-lifetime-signals.patch"
-            },
-            {
-                "type": "patch",
-                "path": "qt-patches/qtwayland-make-handleupdate-aware-of-exposure-changes.patch"
-            },
-            {
-                "type": "patch",
-                "path": "qt-patches/qtwayland-dont-crash-when-start-drag-without-dragfocus.patch"
-            },
-            {
-                "type": "patch",
-                "path": "qt-patches/qtwayland-fix-expose-event-compression.patch"
+                "url": "http://download.qt.io/archive/qt/5.13/5.13.1/submodules/qtwayland-everywhere-src-5.13.1.tar.xz",
+                "sha256": "def836f365b8af99cc693625f2079a54a0f71f5eff3f370dcf6f30b8944caf77"
             },
             {
                 "type": "patch",
@@ -724,8 +700,8 @@
         "sources": [
             {
                 "type": "archive",
-                "url": "http://download.qt.io/archive/qt/5.12/5.12.4/submodules/qtx11extras-everywhere-src-5.12.4.tar.xz",
-                "sha256": "49cc009eaf4a01ca7dbe12651ef39de9a43860acb674aec372e70b209f9bae1e"
+                "url": "http://download.qt.io/archive/qt/5.13/5.13.1/submodules/qtx11extras-everywhere-src-5.13.1.tar.xz",
+                "sha256": "0bc59f59f8d99674d3f56df091beb1a2d6fb9c103674c0fd412ce769e9656624"
             }
         ]
     },
