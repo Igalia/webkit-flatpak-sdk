@@ -95,6 +95,19 @@
                 "url": "https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tar.xz",
                 "sha256": "f222ef602647eecb6853681156d32de4450a2c39f4de93bd5b20235f2e660ed7"
             }
+        ],
+        "config-opts": [
+            "--with-system-ffi",
+            "--prefix=/usr",
+            "--enable-shared",
+            "--with-lto"
+        ],
+        "make-install-args": [
+            "DESTSHARED=/usr/lib/python2.7/lib-dynload"
+        ],
+        "post-install": [
+            "chmod 755 /usr/lib/x86_64-linux-gnu/libpython2.7.so.1.0",
+            "python -m ensurepip --default-pip"
         ]
     },
     {
