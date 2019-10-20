@@ -538,11 +538,15 @@
         "sources": [
             {
                 "type": "archive",
-                "url": "http://github.com/uclouvain/openjpeg/archive/v2.3.0.tar.gz",
-                "sha256": "3dc787c1bb6023ba846c2a0d9b1f6e179f1cd255172bde9eb75b01f1e6c7d71a"
+                "url": "http://github.com/uclouvain/openjpeg/archive/v2.3.1.tar.gz",
+                "sha256": "63f5a4713ecafc86de51bfad89cc07bb788e9bba24ebbf0c4ca637621aadb6a9"
             }
         ],
-        "buildsystem": "cmake-ninja"
+        "buildsystem": "cmake-ninja",
+        "config-opts": [
+            // TODO: Somehow invoke gcc -dumpmachine instead of hardcoding it here.
+            "-DOPENJPEG_INSTALL_LIB_DIR=lib/x86_64-linux-gnu"
+        ]
     },
     {
         "name": "libnotify",
