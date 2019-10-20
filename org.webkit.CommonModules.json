@@ -722,3 +722,58 @@
             }
         ]
     },
+    {
+        "name": "fontenc",
+        "sources": [
+            {
+                "type": "archive",
+                "url": "https://www.x.org/releases/individual/lib/libfontenc-1.1.4.tar.gz",
+                "sha256": "895ee0986b32fbfcda7f4f25ef6cbacfa760e1690bf59f02085ce0e7d1eebb41"
+            }
+        ]
+    },
+    {
+        "name": "xfont2",
+        "sources": [
+            {
+                "type": "archive",
+                "url": "https://www.x.org/releases/individual/lib/libXfont2-2.0.4.tar.gz",
+                "sha256": "74e577294c7406b284c50dfcfb5e5d9b3b0cc2d83d33866920ffe1e4860f585a"
+            }
+        ]
+    },
+    {
+        "name": "xserver",
+        "sources": [
+            {
+                "type": "archive",
+                "url": "https://www.x.org/releases/individual/xserver/xorg-server-1.20.5.tar.bz2",
+                "sha256": "a81d8243f37e75a03d4f8c55f96d0bc25802be6ec45c3bfa5cb614c6d01bac9d"
+            }
+        ],
+        "config-opts": [
+            "--disable-selective-werror",
+            "--disable-xinerama",
+            "--enable-glx",
+            "--enable-composite",
+            "--disable-xorg",
+            "--disable-dri3",
+            "--disable-dmx",
+            "--disable-xnest",
+            "--disable-xquartz",
+            "--disable-xwin",
+            "--disable-xephyr",
+            "--disable-xfake",
+            "--disable-xfbdev",
+            "--disable-install-setuid",
+            "--disable-unit-tests",
+            "--disable-present",
+            "--enable-unix-transport",
+            "--enable-tcp-transport",
+            "--disable-local-transport",
+            "--with-xkb-path=/usr/share/X11/xkb",
+            "--with-xkb-output=/var/lib/xkb",
+            "--with-xkb-bin-directory=/usr/bin",
+            "--without-dtrace"
+        ]
+    },
