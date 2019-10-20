@@ -777,3 +777,31 @@
             "--without-dtrace"
         ]
     },
+    {
+        "name": "webkitgtk-test-fonts",
+        "no-autogen": true,
+        "sources": [
+            {
+                "type": "git",
+                "url": "https://github.com/WebKitGTK/webkitgtk-test-fonts.git",
+                "tag": "0.0.8"
+            }
+        ],
+        "make-install-args": [
+            "DESTDIR=${FLATPAK_DEST}/share"
+        ]
+    },
+    {
+        "name": "webkitgtk-test-dicts",
+        "no-autogen": true,
+        "sources": [
+            {
+                "type": "git",
+                "url": "https://github.com/mrobinson/webkitgtk-test-dicts.git",
+                "tag": "0.0.1"
+            }
+        ],
+        "make-install-args": [
+            "DESTDIR=${FLATPAK_DEST}/share"
+        ]
+    },
