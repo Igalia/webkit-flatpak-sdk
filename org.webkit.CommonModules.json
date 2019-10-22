@@ -329,7 +329,7 @@
         "sources": [
             {
                 "type": "git",
-                "url": "https://anongit.freedesktop.org/git/gstreamer/gst-plugins-ugly",
+                "url": "https://gitlab.freedesktop.org/gstreamer/gst-plugins-ugly.git",
                 "branch": "1.16.1"
             }
         ],
