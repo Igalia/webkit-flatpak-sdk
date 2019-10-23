@@ -437,6 +437,43 @@
         ]
     },
     {
+        "name": "python2-pycairo",
+        "buildsystem": "simple",
+        "build-commands": [
+            "python2 setup.py install --prefix=/usr"
+        ],
+        "sources": [
+            {
+                "type": "archive",
+                "url": "https://pypi.python.org/packages/ef/97/b33dc533ea6076d4ea9cbd2fe049a2b4a3df5c5b6fba9a182616f6f8d310/pycairo-1.15.4.tar.gz",
+                "sha256": "ee4c3068c048230e5ce74bb8994a024711129bde1af1d76e3276c7acd81c4357"
+            }
+        ],
+        "cleanup": [
+            "/include",
+            "/lib/pkgconfig"
+        ]
+    },
+    {
+        "name": "python2-gobject",
+        "build-options": {
+            "env": {
+                "PYTHON": "/usr/bin/python2"
+            }
+        },
+        "sources": [
+            {
+                "type": "archive",
+                "url": "https://download.gnome.org/sources/pygobject/3.28/pygobject-3.28.1.tar.xz",
+                "sha256": "42312b4a5015571fa0a4f2d201005da46b71c251ea2625bc95702d071c4ff895"
+            }
+        ],
+        "cleanup": [
+            "/include",
+            "/lib/pkgconfig"
+        ]
+    },
+    {
         "name": "libcap-ng",
         "sources": [
             {
