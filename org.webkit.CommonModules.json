@@ -393,7 +393,7 @@
         "name": "perl-cgi-pm",
         "buildsystem": "simple",
         "build-commands": [
-            "perl Makefile.PL PREFIX=/usr LIB=/usr/lib/perl/",
+            "perl Makefile.PL PREFIX=/usr LIB=/usr/lib/perl5/5.30.0",
             "make install"
         ],
         "sources": [
