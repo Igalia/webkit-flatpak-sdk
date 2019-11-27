@@ -1,17 +1,17 @@
 
 BUILD_DIR=sdk
 REPO_DIR=repo
-GPG_KEY=B4DE89FD36B35904BE093EAB08D46DB9D6A2D341
-RSYNC_HOST=base-art.net
-RSYNC_REMOTE_DIR=/home/wpe-sdk-repo
+GPG_KEY=42BF02F3FE110DFE18969EFDE46BF2BE5E74699D
+RSYNC_HOST=software.igalia.com
+RSYNC_REMOTE_DIR=/var/www/software/webkit-sdk-repo
 
 all: build
 
-expanded-manifest.json: org.wpe.Sdk.json org.webkit.CommonModules.json org.webkit.WPEModules.json
-	cpp -P org.wpe.Sdk.json > $@
+expanded-manifest.json: org.webkit.Sdk.json org.webkit.CommonModules.json org.webkit.WPEModules.json
+	cpp -P org.webkit.Sdk.json > $@
 
 build: expanded-manifest.json
-	flatpak-builder --force-clean --ccache --require-changes --repo=${REPO_DIR} --arch=x86_64 --subject="org.wpewebkit flatpak runtime, `date`" ${BUILD_DIR} $<
+	flatpak-builder --force-clean --ccache --require-changes --repo=${REPO_DIR} --arch=x86_64 --subject="WebKit developer flatpak SDK/Runtime, `date`" ${BUILD_DIR} $<
 
 sign-repo: build
 	flatpak build-sign ${REPO_DIR} --gpg-sign=${GPG_KEY} --gpg-homedir=gpg

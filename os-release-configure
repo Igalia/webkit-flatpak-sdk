@@ -10,8 +10,8 @@ install:
 	mkdir -p ${DESTDIR}/etc
 	install issue ${DESTDIR}/etc
 	install issue.net ${DESTDIR}/etc
-	install org.wpewebkit.Platform.appdata.xml ${DESTDIR}/usr/share/appdata
-	install org.wpewebkit.Sdk.appdata.xml ${DESTDIR}/usr/share/appdata
-	appstream-compose --basename=org.wpewebkit.Platform --prefix=/usr --origin=flatpak org.wpewebkit.Platform
-	appstream-compose --basename=org.wpewebkit.Sdk --prefix=/usr --origin=flatpak org.wpewebkit.Sdk
+	install org.webkit.Platform.appdata.xml ${DESTDIR}/usr/share/appdata
+	install org.webkit.Sdk.appdata.xml ${DESTDIR}/usr/share/appdata
+	appstream-compose --basename=org.webkit.Platform --prefix=/usr --origin=flatpak org.webkit.Platform
+	appstream-compose --basename=org.webkit.Sdk --prefix=/usr --origin=flatpak org.webkit.Sdk
 EOF

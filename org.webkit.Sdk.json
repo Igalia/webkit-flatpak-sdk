@@ -1,7 +1,7 @@
 {
     "build-runtime": true,
-    "id": "org.wpewebkit.Sdk",
-    "id-platform": "org.wpewebkit.Platform",
+    "id": "org.webkit.Sdk",
+    "id-platform": "org.webkit.Platform",
     "branch": "0.1",
     "runtime": "org.freedesktop.Platform",
     "sdk": "org.freedesktop.Sdk",
@@ -96,11 +96,11 @@
                 },
                 {
                     "type": "file",
-                    "path": "org.wpewebkit.Sdk.appdata.xml"
+                    "path": "org.webkit.Sdk.appdata.xml"
                 },
                 {
                     "type": "file",
-                    "path": "org.wpewebkit.Platform.appdata.xml"
+                    "path": "org.webkit.Platform.appdata.xml"
                 },
                 {
                     "type": "file",

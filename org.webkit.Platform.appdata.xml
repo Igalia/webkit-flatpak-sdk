@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="runtime">
+  <id>org.webkit.Platform</id>
+  <metadata_license>CC0</metadata_license>
+  <!-- FIXME -->
+  <project_license>GPL-2.0+</project_license>
+  <name>WebKit Developer Application Platform version master</name>
+  <summary>Shared libraries used for WebKit (WPE/GTK) development</summary>
+  <url type="homepage">https://www.webkit.org/</url>
+  <project_group>WPE</project_group>
+</component>
