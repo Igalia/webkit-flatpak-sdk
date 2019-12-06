@@ -26,26 +26,26 @@ $ make
 4. Deploy!
 ```shell
 $ make publish
-# Edit wpe-sdk.flatpakrepo accordingly (URLs and GPGKey (from the key.base64 file))
-$ scp wpe-sdk.flatpakrepo web-host:...
+# Edit webkit-sdk.flatpakrepo accordingly (URLs and GPGKey (from the key.base64 file))
+$ scp webkit-sdk.flatpakrepo web-host:...
 ```
 
 # Test on a client machine
 
 1. Install the SDK:
 ```shell
-$ flatpak --user remote-add wpe-sdk https://base-art.net/wpe-sdk.flatpakrepo
-$ flatpak install --user org.wpewebkit.Sdk
+$ flatpak --user remote-add webkit-sdk https://software.igalia.com/flatpak-refs/webkit-sdk.flatpakrepo
+$ flatpak install --user org.webkit.Sdk
 ```
 
 2. Run a WebKit build from the SDK sandbox:
 ```shell
-flatpak run --command=/bin/bash --filesystem=host org.wpewebkit.Sdk
+flatpak run --command=/bin/bash --filesystem=host org.webkit.Sdk
 cd ~/WebKit
 mkdir fpbuild
 cd fpbuild
-cmake .. -GNinja -DPORT=WPE -DUSE_OPENJPEG=OFF
+cmake .. -GNinja -DPORT=WPE
 ninja
 ```
 
-Step 2 might be available directly from `build-webkit` at some point in the future.
+Step 2 will be available directly from `build-webkit` at some point in the future.
