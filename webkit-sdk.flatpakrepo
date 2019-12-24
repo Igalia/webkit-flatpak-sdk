@@ -1,6 +1,6 @@
 [Flatpak Repo]
 Title=WebKit Developer SDK
-Url=https://software.igalia.com/webkit-dev-sdk/
+Url=https://software.igalia.com/webkit-sdk-repo/
 Homepage=https://webkit.org
 Comment=Central repository of the WebKit Developer Runtime and SDK
 Description=Central repository of the WebKit Developer Runtime and SDK
