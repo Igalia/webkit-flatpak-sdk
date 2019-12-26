@@ -860,3 +860,66 @@
             }
         ]
     },
+    {
+        "name": "mtdev",
+        "sources": [
+            {
+                "type": "archive",
+                "url": "http://bitmath.org/code/mtdev/mtdev-1.1.5.tar.bz2",
+                "sha256": "6677d5708a7948840de734d8b4675d5980d4561171c5a8e89e54adf7a13eba7f"
+            }
+        ]
+    },
+    {
+        "name": "libevdev",
+        "sources": [
+            {
+                "type": "archive",
+                "url": "https://www.freedesktop.org/software/libevdev/libevdev-1.8.0.tar.xz",
+                "sha256": "20d3cae4efd277f485abdf8f2a7c46588e539998b5a08c2c4d368218379d4211"
+            }
+        ]
+    },
+    {
+        "name": "libinput",
+        "buildsystem": "meson",
+        "sources": [
+            {
+                "type": "archive",
+                "url": "https://www.freedesktop.org/software/libinput/libinput-1.14.3.tar.xz",
+                "sha256": "0feb3a0589709cc1032893bfaf4c49150d5360bd9782bec888f9e4dd9044c5b7"
+            }
+        ],
+        "config-opts": [
+            "-Dlibwacom=false",
+            "-Dtests=false",
+            "-Ddocumentation=false"
+        ]
+    },
+    {
+        "name": "libpam",
+        "sources": [
+            {
+                "type": "archive",
+                "url": "https://github.com/linux-pam/linux-pam/releases/download/v1.3.1/Linux-PAM-1.3.1.tar.xz",
+                "sha256": "eff47a4ecd833fbf18de9686632a70ee8d0794b79aecb217ebd0ce11db4cd0db"
+            }
+        ]
+    },
+    {
+        "name": "weston",
+        "buildsystem": "meson",
+        "sources": [
+            {
+                "type": "archive",
+                "url": "https://wayland.freedesktop.org/releases/weston-7.0.0.tar.xz",
+                "sha256": "a00a6d207b6a45f95f4401c604772a307c3767e5e2beecf3d879110c43909a64"
+            }
+        ],
+        "config-opts": [
+            "-Dbackend-rdp=false",
+            "-Dcolor-management-colord=false",
+            "-Ddemo-clients=false",
+            "-Dsimple-dmabuf-drm="
+        ]
+    },
