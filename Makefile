@@ -11,7 +11,8 @@ expanded-manifest.json: org.webkit.Sdk.json org.webkit.CommonModules.json org.we
 	cpp -P org.webkit.Sdk.json > $@
 
 build: expanded-manifest.json
-	flatpak-builder --force-clean --ccache --require-changes --repo=${REPO_DIR} --arch=x86_64 --subject="WebKit developer flatpak SDK/Runtime, `date`" ${BUILD_DIR} $<
+	flatpak --user remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+	flatpak-builder --user --install-deps-from=flathub --force-clean --ccache --require-changes --repo=${REPO_DIR} --arch=x86_64 --subject="WebKit developer flatpak SDK/Runtime, `date`" ${BUILD_DIR} $<
 
 sign-repo: build
 	flatpak build-sign ${REPO_DIR} --gpg-sign=${GPG_KEY} --gpg-homedir=gpg
