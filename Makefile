@@ -21,5 +21,5 @@ sign-repo: build
 publish: sign-repo
 	rsync -avz ${REPO_DIR}/ ${RSYNC_HOST}:${RSYNC_REMOTE_DIR}
 
-sdk-debug-shell:
-	flatpak-builder --run ${BUILD_DIR} expanded-manifest.json sh
+sdk-debug-shell: expanded-manifest.json
+	flatpak-builder --run ${BUILD_DIR} $< sh
