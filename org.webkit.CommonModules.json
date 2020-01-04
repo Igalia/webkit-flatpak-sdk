@@ -629,8 +629,8 @@
         "sources": [
             {
                 "type": "archive",
-                "url": "http://download.qt.io/archive/qt/5.13/5.13.1/submodules/qtbase-everywhere-src-5.13.1.tar.xz",
-                "sha256": "110cd08cdacab26274bf2519d3508046616c0b638f0d2f5e00bc8bad87469eab"
+                "url": "http://download.qt.io/archive/qt/5.14/5.14.0/submodules/qtbase-everywhere-src-5.14.0.tar.xz",
+                "sha256": "4ef921c0f208a1624439801da8b3f4344a3793b660ce1095f2b7f5c4246b9463"
             },
             {
                 "type": "patch",
@@ -661,8 +661,8 @@
         "sources": [
             {
                 "type": "archive",
-                "url": "http://download.qt.io/archive/qt/5.13/5.13.1/submodules/qtdeclarative-everywhere-src-5.13.1.tar.xz",
-                "sha256": "ae3477401b13d6b31e8569629d3f73b3e81e27cec27595988ffd320eaec7f0e2"
+                "url": "http://download.qt.io/archive/qt/5.14/5.14.0/submodules/qtdeclarative-everywhere-src-5.14.0.tar.xz",
+                "sha256": "bbf11ee33d6f0d6bd6c4dc641d4f2aafbc7c6cd3b421a658955302d441dc9d8e"
             },
             {
                 "type": "patch",
@@ -677,8 +677,8 @@
         "sources": [
             {
                 "type": "archive",
-                "url": "http://download.qt.io/archive/qt/5.13/5.13.1/submodules/qtquickcontrols-everywhere-src-5.13.1.tar.xz",
-                "sha256": "5f3dd9a7c25aabe7a21ed7d137c23e2bfff948fefe94b183b5dee1a13667eb9b"
+                "url": "http://download.qt.io/archive/qt/5.14/5.14.0/submodules/qtquickcontrols-everywhere-src-5.14.0.tar.xz",
+                "sha256": "6dd477bcb36a94ab417faab5e607f7a07c217c4ca3f751d8d76d475ab0f3558e"
             }
         ]
     },
@@ -689,8 +689,8 @@
         "sources": [
             {
                 "type": "archive",
-                "url": "http://download.qt.io/archive/qt/5.13/5.13.1/submodules/qtquickcontrols2-everywhere-src-5.13.1.tar.xz",
-                "sha256": "47df5a0d9b65bd6d06fc7edc2a93fba679249d4942163230a72ff6f3cc9f7ab8"
+                "url": "http://download.qt.io/archive/qt/5.14/5.14.0/submodules/qtquickcontrols2-everywhere-src-5.14.0.tar.xz",
+                "sha256": "827bf86db44ce4f698f172378313db04e1cb81c593e9342bdd95bb1708f27911"
             }
         ]
     },
@@ -701,12 +701,8 @@
         "sources": [
             {
                 "type": "archive",
-                "url": "http://download.qt.io/archive/qt/5.13/5.13.1/submodules/qtwayland-everywhere-src-5.13.1.tar.xz",
-                "sha256": "def836f365b8af99cc693625f2079a54a0f71f5eff3f370dcf6f30b8944caf77"
-            },
-            {
-                "type": "patch",
-                "path": "qt-patches/qtwayland-do-not-redraw-decorations-everytime.patch"
+                "url": "http://download.qt.io/archive/qt/5.14/5.14.0/submodules/qtwayland-everywhere-src-5.14.0.tar.xz",
+                "sha256": "32d4fadb3a8dcee8953e6d92ee567927cd7649be6fc8dd378480664902c22610"
             },
             {
                 "type": "patch",
@@ -721,8 +717,8 @@
         "sources": [
             {
                 "type": "archive",
-                "url": "http://download.qt.io/archive/qt/5.13/5.13.1/submodules/qtx11extras-everywhere-src-5.13.1.tar.xz",
-                "sha256": "0bc59f59f8d99674d3f56df091beb1a2d6fb9c103674c0fd412ce769e9656624"
+                "url": "http://download.qt.io/archive/qt/5.14/5.14.0/submodules/qtx11extras-everywhere-src-5.14.0.tar.xz",
+                "sha256": "7a06de3b49d34b72fa773800f049c06c04c51eb3440833779f1e9300a94947b1"
             }
         ]
     },
