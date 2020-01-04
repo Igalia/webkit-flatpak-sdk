@@ -1,4 +1,5 @@
 
+ARCH?=$(shell flatpak --default-arch)
 BUILD_DIR=sdk
 REPO_DIR=repo
 GPG_KEY=42BF02F3FE110DFE18969EFDE46BF2BE5E74699D
@@ -8,11 +9,11 @@ RSYNC_REMOTE_DIR=/var/www/software/webkit-sdk-repo
 all: build
 
 expanded-manifest.json: org.webkit.Sdk.json org.webkit.CommonModules.json org.webkit.WPEModules.json
-	cpp -P org.webkit.Sdk.json > $@
+	cpp -P org.webkit.Sdk.json | sed "s,@@SDK_ARCH@@,$(ARCH),g" > $@
 
 build: expanded-manifest.json
 	flatpak --user remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-	flatpak-builder --user --install-deps-from=flathub --force-clean --ccache --require-changes --repo=${REPO_DIR} --arch=x86_64 --subject="WebKit developer flatpak SDK/Runtime, `date`" ${BUILD_DIR} $<
+	flatpak-builder --user --install-deps-from=flathub --force-clean --ccache --require-changes --repo=${REPO_DIR} --arch=${ARCH} --subject="WebKit developer flatpak SDK/Runtime, `date`" ${BUILD_DIR} $<
 
 sign-repo: build
 	flatpak build-sign ${REPO_DIR} --gpg-sign=${GPG_KEY} --gpg-homedir=gpg

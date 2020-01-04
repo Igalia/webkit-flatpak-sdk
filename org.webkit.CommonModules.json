@@ -106,7 +106,7 @@
             "DESTSHARED=/usr/lib/python2.7/lib-dynload"
         ],
         "post-install": [
-            "chmod 755 /usr/lib/x86_64-linux-gnu/libpython2.7.so.1.0",
+            "chmod 755 /usr/lib/@@SDK_ARCH@@-linux-gnu/libpython2.7.so.1.0",
             "python -m ensurepip --default-pip"
         ]
     },
@@ -549,8 +549,7 @@
         ],
         "buildsystem": "cmake-ninja",
         "config-opts": [
-            // TODO: Somehow invoke gcc -dumpmachine instead of hardcoding it here.
-            "-DOPENJPEG_INSTALL_LIB_DIR=lib/x86_64-linux-gnu"
+            "-DOPENJPEG_INSTALL_LIB_DIR=lib/@@SDK_ARCH@@-linux-gnu"
         ]
     },
     {
