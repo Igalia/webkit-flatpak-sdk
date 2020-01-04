@@ -232,11 +232,7 @@
             {
                 "type": "git",
                 "url": "https://github.com/cisco/openh264.git",
-                "branch": "a1b3f07c5271f312997fcc3451237031444c4475"
-            },
-            {
-                "type": "patch",
-                "path": "patches/0001-openh264-meson-New-build-option-to-enable-disable-tests.patch"
+                "branch": "2122fe08cc8fe69899c3e257d0ee030c28a64174"
             }
         ],
         "config-opts": [
