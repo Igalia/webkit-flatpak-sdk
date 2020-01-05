@@ -255,6 +255,16 @@
         ]
     },
     {
+        "name": "libsrtp2",
+        "sources": [
+            {
+                "type": "git",
+                "url": "https://github.com/cisco/libsrtp.git",
+                "branch": "v2.3.0"
+            }
+        ]
+    },
+    {
         "name": "gstreamer",
         "buildsystem": "meson",
         "sources": [
