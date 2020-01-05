@@ -240,6 +240,21 @@
         ]
     },
     {
+        "name": "libusrsctp",
+        "buildsystem": "meson",
+        "sources": [
+            {
+                "type": "git",
+                "url": "https://github.com/sctplab/usrsctp.git",
+                "branch": "81049b90f5703b89154a7dc06cf13f9b01811e06"
+            }
+        ],
+        "config-opts": [
+            "-Dsctp_inet=false",
+            "-Dsctp_inet6=false"
+        ]
+    },
+    {
         "name": "gstreamer",
         "buildsystem": "meson",
         "sources": [
