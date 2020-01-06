@@ -953,3 +953,13 @@
             }
         ]
     },
+    {
+        "name": "psmisc",
+        "sources": [
+            {
+                "type": "git",
+                "url": "https://gitlab.com/psmisc/psmisc.git",
+                "branch": "v23.3"
+            }
+        ]
+    },
