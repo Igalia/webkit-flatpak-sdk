@@ -6,7 +6,7 @@
     "runtime": "org.freedesktop.Platform",
     "sdk": "org.freedesktop.Sdk",
     "runtime-version": "19.08",
-    "sdk-extensions": [ "org.freedesktop.Sdk.Locale", "org.freedesktop.Sdk.Docs" ],
+    "sdk-extensions": [ "org.freedesktop.Sdk.Debug", "org.freedesktop.Sdk.Locale", "org.freedesktop.Sdk.Docs" ],
     "inherit-extensions": [
         "org.freedesktop.Platform.GL",
         "org.freedesktop.Platform.Icontheme",
