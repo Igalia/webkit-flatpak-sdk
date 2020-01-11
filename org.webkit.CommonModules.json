@@ -28,7 +28,8 @@
             {
                 "type": "git",
                 "url": "https://github.com/apache/httpd.git",
-                "branch": "2.4.37"
+                "tag": "2.4.37",
+                "commit": "6431bbb0da47dd984110dc32728a84e5cc990313"
             },
             {
                 "type": "file",
@@ -80,7 +81,8 @@
             {
                 "type": "git",
                 "url": "https://github.com/libevent/libevent.git",
-                "branch": "e7ff4ef"
+                "tag": "release-2.1.8-stable",
+                "commit": "e7ff4ef2b4fc950a765008c18e74281cdb5e7668"
             }
         ],
         "config-opts": [
@@ -245,7 +247,8 @@
             {
                 "type": "git",
                 "url": "https://github.com/cisco/openh264.git",
-                "branch": "2122fe08cc8fe69899c3e257d0ee030c28a64174"
+                "branch": "master",
+                "commit": "2122fe08cc8fe69899c3e257d0ee030c28a64174"
             }
         ],
         "config-opts": [
@@ -259,7 +262,8 @@
             {
                 "type": "git",
                 "url": "https://github.com/sctplab/usrsctp.git",
-                "branch": "81049b90f5703b89154a7dc06cf13f9b01811e06"
+                "branch": "master",
+                "commit": "49dea54aef5f6994bed75d3214b8ade1b971f293"
             }
         ],
         "config-opts": [
@@ -273,7 +277,8 @@
             {
                 "type": "git",
                 "url": "https://github.com/cisco/libsrtp.git",
-                "branch": "v2.3.0"
+                "tag": "v2.3.0",
+                "commit": "d02d21111e379c297e93a9033d7b653135f732ee"
             }
         ]
     },
@@ -284,7 +289,8 @@
             {
                 "type": "git",
                 "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer.git",
-                "branch": "1.16.2"
+                "tag": "1.16.2",
+                "commit": "129493687793cbc109d6211bb0e465218e383e9d"
             }
         ],
         "config-opts": [
@@ -322,7 +328,8 @@
             {
                 "type": "git",
                 "url": "https://gitlab.freedesktop.org/gstreamer/gst-plugins-good.git",
-                "branch": "1.16.2"
+                "tag": "1.16.2",
+                "commit": "ce0723527aa37d5f4d19ef8021c0b2eb8f83b08d"
             },
             {
                 "type": "patch",
@@ -360,7 +367,8 @@
             {
                 "type": "git",
                 "url": "https://gitlab.freedesktop.org/gstreamer/gst-plugins-ugly.git",
-                "branch": "1.16.2"
+                "tag": "1.16.2",
+                "commit": "4b2943ee2788331e4000f0f7e226cd5ce2c135a4"
             }
         ],
         "config-opts": [
@@ -374,7 +382,8 @@
             {
                 "type": "git",
                 "url": "https://gitlab.freedesktop.org/gstreamer/gst-plugins-bad.git",
-                "branch": "1.16.2"
+                "tag": "1.16.2",
+                "commit": "a6f26408f74a60d02ce6b4f0daee392ce847055f"
             },
             {
                 "type": "patch",
@@ -408,7 +417,8 @@
             {
                 "type": "git",
                 "url": "https://dev.gnupg.org/source/libgcrypt.git",
-                "branch": "libgcrypt-1.8.4"
+                "tag": "libgcrypt-1.8.4",
+                "commit": "93775172713c00c363187b5d6a88895b04ac7c8e"
             },
             {
                 "type": "patch",
@@ -527,7 +537,8 @@
             {
                 "type": "git",
                 "url": "https://github.com/stevegrubb/libcap-ng",
-                "branch": "v0.7.9"
+                "tag": "v0.7.9",
+                "commit": "3808dd8b57f6be32ad77daec53498f0d28494ef3"
             }
         ],
         "config-opts": [
@@ -827,7 +838,8 @@
             {
                 "type": "git",
                 "url": "https://github.com/WebKitGTK/webkitgtk-test-fonts.git",
-                "tag": "0.0.8"
+                "tag": "0.0.8",
+                "commit": "f6382ed93932cca128c8d9edec3088f85a7592d9"
             }
         ],
         "make-install-args": [
@@ -841,7 +853,8 @@
             {
                 "type": "git",
                 "url": "https://github.com/mrobinson/webkitgtk-test-dicts.git",
-                "tag": "0.0.1"
+                "tag": "0.0.1",
+                "commit": "a63aa52f09ddbf2532304a5751d22e5712299b0d"
             }
         ],
         "make-install-args": [
@@ -934,9 +947,10 @@
         "name": "libpam",
         "sources": [
             {
-                "type": "archive",
-                "url": "https://github.com/linux-pam/linux-pam/releases/download/v1.3.1/Linux-PAM-1.3.1.tar.xz",
-                "sha256": "eff47a4ecd833fbf18de9686632a70ee8d0794b79aecb217ebd0ce11db4cd0db"
+                "type": "git",
+                "url": "https://github.com/linux-pam/linux-pam.git",
+                "tag": "v1.3.1",
+                "commit": "3b77a78d575b8ab56bb0e828499df328d55c925f"
             }
         ]
     },
@@ -961,9 +975,10 @@
         "name": "graphviz",
         "sources": [
             {
-                "type": "archive",
-                "url": "https://graphviz.gitlab.io/pub/graphviz/stable/SOURCES/graphviz.tar.gz",
-                "sha256": "ca5218fade0204d59947126c38439f432853543b0818d9d728c589dfe7f3a421"
+                "type": "git",
+                "url": "https://gitlab.com/graphviz/graphviz.git",
+                "tag": "2.42.2",
+                "commit": "da4c2ec6f24ca1b6d1752c6b5bc4389e55682147"
             }
         ]
     },
@@ -973,7 +988,8 @@
             {
                 "type": "git",
                 "url": "https://gitlab.com/psmisc/psmisc.git",
-                "branch": "v23.3"
+                "tag": "v23.3",
+                "commit": "78bde849041e6c914a2a517ebe1255b86dc98772"
             }
         ]
     },
