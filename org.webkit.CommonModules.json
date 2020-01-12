@@ -214,6 +214,9 @@
                 "sha256": "4c775c38cf1e3c534ef0ca52ca6c7a890fe169981af66141c713e054e68930a9"
             }
         ],
+        "config-opts": [
+            "--disable-introspection"
+        ],
         "ensure-writable": [
             "/lib/@@SDK_ARCH@@-linux-gnu/gtk-3.0/3.0.0/immodules.cache"
         ]
