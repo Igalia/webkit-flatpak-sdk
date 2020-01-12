@@ -858,8 +858,8 @@
         "sources": [
             {
                 "type": "archive",
-                "url": "https://gitlab.freedesktop.org/xdg/shared-mime-info/uploads/b27eb88e4155d8fccb8bb3cd12025d5b/shared-mime-info-1.15.tar.xz",
-                "sha256": "f482b027437c99e53b81037a9843fccd549243fd52145d016e9c7174a4f5db90"
+                "url": "https://gitlab.freedesktop.org/xdg/shared-mime-info/uploads/6a226038bf42dae45a049a6b8e729abc/shared-mime-info-1.10.tar.xz",
+                "sha256": "c625a83b4838befc8cafcd54e3619946515d9e44d63d61c4adf7f5513ddfbebf"
             }
         ]
     },
@@ -868,8 +868,8 @@
         "sources": [
             {
                 "type": "archive",
-                "url": "https://ftp.gnome.org/pub/GNOME/sources/adwaita-icon-theme/3.34/adwaita-icon-theme-3.34.0.tar.xz",
-                "sha256": "40b7e91f8263552b64d0f9beff33150291b086618ce498c71bf10035e48c7c7f"
+                "url": "https://download.gnome.org/sources/adwaita-icon-theme/3.24/adwaita-icon-theme-3.24.0.tar.xz",
+                "sha256": "ccf79ff3bd340254737ce4d28b87f0ccee4b3358cd3cd5cd11dc7b42f41b272a"
             }
         ]
     },
