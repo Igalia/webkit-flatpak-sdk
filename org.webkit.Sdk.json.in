@@ -67,8 +67,14 @@
                         ],
     "cleanup-platform-commands": [ "/usr/libexec/freedesktop-post.sh" ],
     "modules": [
-#include "org.webkit.CommonModules.json"
-#include "org.webkit.WPEModules.json"
+#include "Base.json"
+#include "DisplayServer.json"
+#include "Misc.json"
+#include "Qt5.json"
+#include "Python.json"
+#include "WPEModules.json"
+#include "TestInfra.json"
+#include "Multimedia.json"
         {
             "name": "os-release",
             "post-install": [

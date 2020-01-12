@@ -25,7 +25,7 @@ $ make
 
 4. Deploy!
 ```shell
-$ make publish
+$ make push-repo
 # Edit webkit-sdk.flatpakrepo accordingly (URLs and GPGKey (from the key.base64 file))
 $ scp webkit-sdk.flatpakrepo web-host:...
 ```

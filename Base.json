@@ -1,0 +1,235 @@
+{
+    "name": "intltool",
+    "cleanup": [ "*" ],
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz",
+            "sha256": "67c74d94196b153b774ab9f89b2fa6c6ba79352407037c8c14d5aeb334e959cd"
+        }
+    ]
+},
+{
+    "name": "libevent",
+    "sources": [
+        {
+            "type": "git",
+            "url": "https://github.com/libevent/libevent.git",
+            "tag": "release-2.1.8-stable",
+            "commit": "e7ff4ef2b4fc950a765008c18e74281cdb5e7668"
+        }
+    ],
+    "config-opts": [
+        "--disable-libevent-regress"
+    ]
+},
+{
+    "name": "atk",
+    "buildsystem": "meson",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "http://ftp.gnome.org/pub/GNOME/sources/atk/2.33/atk-2.33.3.tar.xz",
+            "sha256": "532d1081e87b9f0a8d71733101e791818442fa1896531621d1aecc189e1a4ffe"
+        }
+    ],
+    "config-opts": [
+        "-Dintrospection=false"
+    ]
+},
+{
+    "name": "at-spi2-core",
+    "buildsystem": "meson",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "http://ftp.gnome.org/pub/GNOME/sources/at-spi2-core/2.33/at-spi2-core-2.33.2.tar.xz",
+            "sha256": "0e3f44707cccf9ec9098f84abdf91ea654c919eac3c688400f8d261383cc2abe"
+        }
+    ],
+    "config-opts": [
+        "-Dintrospection=no"
+    ]
+},
+{
+    "name": "at-spi2-atk",
+    "buildsystem": "meson",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "http://ftp.gnome.org/pub/GNOME/sources/at-spi2-core/2.33/at-spi2-core-2.33.2.tar.xz",
+            "sha256": "0e3f44707cccf9ec9098f84abdf91ea654c919eac3c688400f8d261383cc2abe"
+        }
+    ]
+},
+{
+    "name": "libsecret",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "http://ftp.gnome.org/pub/GNOME/sources/libsecret/0.18/libsecret-0.18.8.tar.xz",
+            "sha256": "3bfa889d260e0dbabcf5b9967f2aae12edcd2ddc9adc365de7a5cc840c311d15"
+        }
+    ]
+},
+{
+    "name": "cairo",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://cairographics.org/releases/cairo-1.16.0.tar.xz",
+            "sha256": "5e7b29b3f113ef870d1e3ecf8adf21f923396401604bda16d44be45e66052331"
+        },
+        {
+            "type": "patch",
+            "path": "gtk-patches/cairo-ft-Use-FT_Done_MM_Var-instead-of-free-when-available.patch"
+        }
+    ]
+},
+{
+    "name": "gtk3",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://download.gnome.org/sources/gtk+/3.24/gtk+-3.24.13.tar.xz",
+            "sha256": "4c775c38cf1e3c534ef0ca52ca6c7a890fe169981af66141c713e054e68930a9"
+        }
+    ],
+    "config-opts": [
+        "--disable-introspection"
+    ],
+    "ensure-writable": [
+        "/lib/@@SDK_ARCH@@-linux-gnu/gtk-3.0/3.0.0/immodules.cache"
+    ]
+},
+{
+    "name": "libgcrypt",
+    "sources": [
+        {
+            "type": "git",
+            "url": "https://dev.gnupg.org/source/libgcrypt.git",
+            "tag": "libgcrypt-1.8.4",
+            "commit": "93775172713c00c363187b5d6a88895b04ac7c8e"
+        },
+        {
+            "type": "patch",
+            "path": "patches/libgcrypt-0001-Use-pkg-config-to-detect-gpg-error.patch"
+        },
+        {
+            "type": "patch",
+            "path": "gtk-patches/libgcrypt-use-only-dev-urandom-for-testing.patch"
+        }
+    ],
+    "config-opts": [
+        "--disable-doc"
+    ]
+},
+{
+    "name": "libcap-ng",
+    "sources": [
+        {
+            "type": "git",
+            "url": "https://github.com/stevegrubb/libcap-ng",
+            "tag": "v0.7.9",
+            "commit": "3808dd8b57f6be32ad77daec53498f0d28494ef3"
+        }
+    ],
+    "config-opts": [
+        "--with-python=no",
+        "--with-python3=no"
+    ]
+},
+{
+    "name": "lzo2",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "http://www.oberhumer.com/opensource/lzo/download/lzo-2.10.tar.gz",
+            "sha1": "4924676a9bae5db58ef129dc1cebce3baa3c4b5d"
+        }
+    ]
+},
+{
+    "name": "libsoup",
+    "buildsystem": "meson",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "http://ftp.gnome.org/pub/GNOME/sources/libsoup/2.68/libsoup-2.68.3.tar.xz",
+            "sha256": "534bb08e35b0ff3702f3adfde87d3441e27c12f9f5ec351f056fe04cba02bafb"
+        }
+    ],
+    "config-opts": [
+        "-Dintrospection=disabled",
+        "-Dgssapi=disabled",
+        "-Dvapi=disabled"
+    ]
+},
+{
+    "name": "shared-mime-info",
+    "no-parallel-make": true,
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://gitlab.freedesktop.org/xdg/shared-mime-info/uploads/6a226038bf42dae45a049a6b8e729abc/shared-mime-info-1.10.tar.xz",
+            "sha256": "c625a83b4838befc8cafcd54e3619946515d9e44d63d61c4adf7f5513ddfbebf"
+        }
+    ]
+},
+{
+    "name": "xdg-dbus-proxy",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://github.com/flatpak/xdg-dbus-proxy/releases/download/0.1.2/xdg-dbus-proxy-0.1.2.tar.xz",
+            "sha256": "1749d6f9f46dcc9edc87725641cf56cf91dcad1b01707891ea0850c1000c520f"
+        }
+    ]
+},
+{
+    "name": "mtdev",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "http://bitmath.org/code/mtdev/mtdev-1.1.5.tar.bz2",
+            "sha256": "6677d5708a7948840de734d8b4675d5980d4561171c5a8e89e54adf7a13eba7f"
+        }
+    ]
+},
+{
+    "name": "libevdev",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://www.freedesktop.org/software/libevdev/libevdev-1.8.0.tar.xz",
+            "sha256": "20d3cae4efd277f485abdf8f2a7c46588e539998b5a08c2c4d368218379d4211"
+        }
+    ]
+},
+{
+    "name": "libinput",
+    "buildsystem": "meson",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://www.freedesktop.org/software/libinput/libinput-1.14.3.tar.xz",
+            "sha256": "0feb3a0589709cc1032893bfaf4c49150d5360bd9782bec888f9e4dd9044c5b7"
+        }
+    ],
+    "config-opts": [
+        "-Dlibwacom=false",
+        "-Dtests=false",
+        "-Ddocumentation=false"
+    ]
+},
+{
+    "name": "psmisc",
+    "sources": [
+        {
+            "type": "git",
+            "url": "https://gitlab.com/psmisc/psmisc.git",
+            "tag": "v23.3",
+            "commit": "78bde849041e6c914a2a517ebe1255b86dc98772"
+        }
+    ]
+},

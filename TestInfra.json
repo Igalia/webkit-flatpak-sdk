@@ -1,0 +1,137 @@
+{
+    "name": "apr",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://www.apache.org/dist/apr/apr-1.6.5.tar.bz2",
+            "sha256": "a67ca9fcf9c4ff59bce7f428a323c8b5e18667fdea7b0ebad47d194371b0a105"
+        }
+    ]
+},
+{
+    "name": "apr-util",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://www.apache.org/dist/apr/apr-util-1.6.1.tar.bz2",
+            "sha512": "40eff8a37c0634f7fdddd6ca5e596b38de15fd10767a34c30bbe49c632816e8f3e1e230678034f578dd5816a94f246fb5dfdf48d644829af13bf28de3225205d"
+        }
+    ],
+    "config-opts": [
+        "--with-apr=/usr/bin/apr-1-config"
+    ]
+},
+{
+    "name": "httpd",
+    "sources": [
+        {
+            "type": "git",
+            "url": "https://github.com/apache/httpd.git",
+            "tag": "2.4.37",
+            "commit": "6431bbb0da47dd984110dc32728a84e5cc990313"
+        },
+        {
+            "type": "file",
+            "path": "files/httpd-autogen.sh",
+            "dest-filename": "autogen.sh"
+        },
+        {
+            "type": "patch",
+            "path": "patches/httpd-0001-configure-use-pkg-config-for-PCRE-detection.patch"
+        }
+    ],
+    "config-opts": [
+        "--enable-mpms-shared=all",
+        "--enable-modules=all",
+        "--with-apr=/usr/bin/apr-1-config",
+        "--with-apr-util=/usr/bin/apu-1-config",
+        "--with-pcre=/usr",
+        "--enable-authnz-fcgi",
+        "--enable-cgi",
+        "--enable-cgid"
+    ]
+},
+{
+    "name": "php",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://php.net/distributions/php-7.2.6.tar.xz",
+            "sha512": "da86b1ff2df3b9e2d46e59a80296b940d81132975b621bdec9602f8b4c8d91a3fdcd4ffd7cb982d63d3ec974b3a12a7854e42a73b7f2cc8eefade14335aa7c71"
+        }
+    ],
+    "config-opts": [
+        "--disable-xml",
+        "--disable-dom",
+        "--disable-libxml",
+        "--disable-simplexml",
+        "--disable-xmlreader",
+        "--disable-xmlwriter",
+        "--without-pear",
+        "--with-apxs2",
+        "--with-zlib",
+        "--with-libzip",
+        "--enable-sockets=shared"
+    ]
+},
+{
+    "name": "perl-cgi-pm",
+    "buildsystem": "simple",
+    "build-commands": [
+        "perl Makefile.PL PREFIX=/usr LIB=/usr/lib/perl5/5.30.0",
+        "make install"
+    ],
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://cpan.metacpan.org/authors/id/L/LE/LEEJO/CGI-4.38.tar.gz",
+            "sha256": "8c58f4a529bb92a914b22b7e64c5e31185c9854a4070a6dfad44fe5cc248e7d4"
+        }
+    ]
+},
+
+{
+    "name": "perl-http-date-pm",
+    "buildsystem": "simple",
+    "build-commands": [
+        "perl Makefile.PL PREFIX=/usr LIB=/usr/lib/perl5/5.30.0",
+        "make install"
+    ],
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://cpan.metacpan.org/authors/id/G/GA/GAAS/HTTP-Date-6.02.tar.gz",
+            "sha256": "e8b9941da0f9f0c9c01068401a5e81341f0e3707d1c754f8e11f42a7e629e333"
+        }
+    ]
+},
+{
+    "name": "webkitgtk-test-dicts",
+    "no-autogen": true,
+    "sources": [
+        {
+            "type": "git",
+            "url": "https://github.com/mrobinson/webkitgtk-test-dicts.git",
+            "tag": "0.0.1",
+            "commit": "a63aa52f09ddbf2532304a5751d22e5712299b0d"
+        }
+    ],
+    "make-install-args": [
+        "DESTDIR=${FLATPAK_DEST}/share"
+    ]
+},
+{
+    "name": "webkitgtk-test-fonts",
+    "no-autogen": true,
+    "sources": [
+        {
+            "type": "git",
+            "url": "https://github.com/WebKitGTK/webkitgtk-test-fonts.git",
+            "tag": "0.0.8",
+            "commit": "f6382ed93932cca128c8d9edec3088f85a7592d9"
+        }
+    ],
+    "make-install-args": [
+        "DESTDIR=${FLATPAK_DEST}/share"
+    ]
+},

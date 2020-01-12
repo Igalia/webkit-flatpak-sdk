@@ -1,0 +1,98 @@
+{
+    "name": "icecc",
+    "sources": [
+        {
+            "type": "git",
+            "url": "https://github.com/icecc/icecream",
+            "tag": "1.2",
+            "commit": "e3d10a32bc6c046d8f3d1182e75c659d4b28ed49"
+            }
+    ],
+    "config-opts": [
+        "--without-man"
+    ]
+},
+{
+    "name": "brotli",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://github.com/google/brotli/archive/v1.0.5.tar.gz",
+            "sha256": "3d5bedd48edb909fe3b87cb99f7d139b987ef6f1616b7e22d74e928270a2fd20"
+        }
+    ],
+    "buildsystem": "cmake-ninja"
+},
+{
+    "name": "woff2",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://github.com/google/woff2/archive/v1.0.2.tar.gz",
+            "sha256": "add272bb09e6384a4833ffca4896350fdb16e0ca22df68c0384773c67a175594"
+        }
+    ],
+    "buildsystem": "cmake-ninja"
+},
+{
+    "name": "openjpeg",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "http://github.com/uclouvain/openjpeg/archive/v2.3.1.tar.gz",
+            "sha256": "63f5a4713ecafc86de51bfad89cc07bb788e9bba24ebbf0c4ca637621aadb6a9"
+        }
+    ],
+    "buildsystem": "cmake-ninja",
+    "config-opts": [
+        "-DOPENJPEG_INSTALL_LIB_DIR=lib/@@SDK_ARCH@@-linux-gnu"
+    ]
+},
+{
+    "name": "libnotify",
+    "buildsystem": "meson",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "http://ftp.gnome.org/pub/GNOME/sources/libnotify/0.7/libnotify-0.7.8.tar.xz",
+            "sha256": "69209e0b663776a00c7b6c0e560302a8dbf66b2551d55616304f240bba66e18c"
+        }
+    ],
+    "config-opts": [
+        "-Dtests=false",
+        "-Dintrospection=disabled",
+        "-Dgtk_doc=false",
+        "-Ddocbook_docs=disabled"
+    ]
+},
+{
+    "name": "enchant",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://github.com/AbiWord/enchant/releases/download/v2.2.5/enchant-2.2.5.tar.gz",
+            "sha256": "ee8a663295c0e039b05d418af065ebcba9e539f785531e552e908030bec48164"
+        }
+    ]
+},
+{
+    "name": "adwaita-icon-theme",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://download.gnome.org/sources/adwaita-icon-theme/3.24/adwaita-icon-theme-3.24.0.tar.xz",
+            "sha256": "ccf79ff3bd340254737ce4d28b87f0ccee4b3358cd3cd5cd11dc7b42f41b272a"
+        }
+    ]
+},
+{
+    "name": "graphviz",
+    "sources": [
+        {
+            "type": "git",
+            "url": "https://gitlab.com/graphviz/graphviz.git",
+            "tag": "2.42.2",
+            "commit": "da4c2ec6f24ca1b6d1752c6b5bc4389e55682147"
+        }
+    ]
+},

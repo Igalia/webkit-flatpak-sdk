@@ -1,0 +1,171 @@
+{
+    "name": "x264",
+    "config-opts": [
+        "--enable-shared",
+        "--enable-static",
+        "--enable-pic",
+        "--disable-lavf",
+        "--disable-asm"
+    ],
+    "sources": [
+        {
+            "type": "archive",
+            "url": "http://download.videolan.org/pub/x264/snapshots/x264-snapshot-20140212-2245-stable.tar.bz2",
+            "sha256": "5d98e9e4faf6dd55e7193ed379aff477b8acbda6777758956ef7e5f05067be18"
+        }
+    ]
+},
+{
+    "name": "libopenh264",
+    "buildsystem": "meson",
+    "sources": [
+        {
+            "type": "git",
+            "url": "https://github.com/cisco/openh264.git",
+            "branch": "master",
+            "commit": "2122fe08cc8fe69899c3e257d0ee030c28a64174"
+        }
+    ],
+    "config-opts": [
+        "-Dtests=disabled"
+    ]
+},
+{
+    "name": "libusrsctp",
+    "buildsystem": "meson",
+    "sources": [
+        {
+            "type": "git",
+            "url": "https://github.com/sctplab/usrsctp.git",
+            "branch": "master",
+            "commit": "49dea54aef5f6994bed75d3214b8ade1b971f293"
+        }
+    ],
+    "config-opts": [
+        "-Dsctp_inet=false",
+        "-Dsctp_inet6=false"
+    ]
+},
+{
+    "name": "libsrtp2",
+    "sources": [
+        {
+            "type": "git",
+            "url": "https://github.com/cisco/libsrtp.git",
+            "tag": "v2.3.0",
+            "commit": "d02d21111e379c297e93a9033d7b653135f732ee"
+        }
+    ]
+},
+{
+    "name": "gstreamer",
+    "buildsystem": "meson",
+    "sources": [
+        {
+            "type": "git",
+            "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer.git",
+            "tag": "1.16.2",
+            "commit": "129493687793cbc109d6211bb0e465218e383e9d"
+        }
+    ],
+    "config-opts": [
+        "-Dgtk_doc=disabled",
+        "-Dintrospection=disabled",
+        "-Dexamples=disabled",
+        "-Dtests=disabled"
+    ]
+},
+{
+    "name": "gst-plugins-base",
+    "buildsystem": "meson",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.16.2.tar.xz",
+            "sha256": "b13e73e2fe74a4166552f9577c3dcb24bed077021b9c7fa600d910ec6987816a"
+        },
+        {
+            "type": "patch",
+            "path": "gstreamer-patches/gst-plugins-base-0001-playbin-Handle-error-message-with-redirection-indica.patch"
+        }
+    ],
+    "config-opts": [
+        "-Dgtk_doc=disabled",
+        "-Dintrospection=disabled",
+        "-Dexamples=disabled",
+        "-Dtests=disabled"
+    ]
+},
+{
+    "name": "gst-plugins-good",
+    "buildsystem": "meson",
+    "sources": [
+        {
+            "type": "git",
+            "url": "https://gitlab.freedesktop.org/gstreamer/gst-plugins-good.git",
+            "tag": "1.16.2",
+            "commit": "ce0723527aa37d5f4d19ef8021c0b2eb8f83b08d"
+        },
+        {
+            "type": "patch",
+            "path": "gstreamer-patches/gst-plugins-good-qtdemux-Specify-REDIRECT-information-in-error-messag.patch"
+        }
+    ],
+    "config-opts": [
+        "-Dgtk_doc=disabled",
+        "-Dintrospection=disabled",
+        "-Dexamples=disabled",
+        "-Dgtk3=disabled"
+    ]
+},
+{
+    "name": "gst-plugins-ugly",
+    "buildsystem": "meson",
+    "sources": [
+        {
+            "type": "git",
+            "url": "https://gitlab.freedesktop.org/gstreamer/gst-plugins-ugly.git",
+            "tag": "1.16.2",
+            "commit": "4b2943ee2788331e4000f0f7e226cd5ce2c135a4"
+        }
+    ],
+    "config-opts": [
+        "-Dgtk_doc=disabled"
+    ]
+},
+{
+    "name": "gst-plugins-bad",
+    "buildsystem": "meson",
+    "sources": [
+        {
+            "type": "git",
+            "url": "https://gitlab.freedesktop.org/gstreamer/gst-plugins-bad.git",
+            "tag": "1.16.2",
+            "commit": "a6f26408f74a60d02ce6b4f0daee392ce847055f"
+        },
+        {
+            "type": "patch",
+            "path": "gstreamer-patches/gst-plugins-bad-0001-h264parse-Post-a-WARNING-when-data-is-broken.patch"
+        }
+    ],
+    "config-opts": [
+        "-Dgtk_doc=disabled",
+        "-Dintrospection=disabled",
+        "-Dexamples=disabled"
+    ]
+},
+{
+    "name": "gst-libav",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.16.2.tar.xz",
+            "sha256": "c724f612700c15a933c7356fbeabb0bb9571fb5538f8b1b54d4d2d94188deef2"
+        },
+        {
+            "type": "patch",
+            "path": "gstreamer-patches/libav-0001-gstavviddec-Limit-default-number-of-decoder-threads.patch"
+        }
+    ],
+    "config-opts": [ "--with-system-libav=no", "--disable-gtk-doc" ]
+},

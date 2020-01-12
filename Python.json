@@ -1,0 +1,142 @@
+{
+    "name": "python2",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tar.xz",
+            "sha256": "f222ef602647eecb6853681156d32de4450a2c39f4de93bd5b20235f2e660ed7"
+        }
+    ],
+    "config-opts": [
+        "--with-system-ffi",
+        "--prefix=/usr",
+        "--enable-shared",
+        "--with-lto"
+    ],
+    "make-install-args": [
+        "DESTSHARED=/usr/lib/python2.7/lib-dynload"
+    ],
+    "post-install": [
+        "chmod 755 /usr/lib/@@SDK_ARCH@@-linux-gnu/libpython2.7.so.1.0",
+        "python -m ensurepip --default-pip"
+    ]
+},
+{
+    "name": "python3-pyaml",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} pyaml"
+    ],
+    "sources": [
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/4a/85/db5a2df477072b2902b0eb892feb37d88ac635d36245a72a6a69b23b383a/PyYAML-3.12.tar.gz",
+            "sha256": "592766c6303207a20efc445587778322d7f73b161bd994f227adaa341ba212ab"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/9e/17/1d4ed6e1a4c0918a0357dfa2fdbe26bf63f6e616013c04a14bce9fd33e40/pyaml-17.12.1.tar.gz",
+            "sha256": "66623c52f34d83a2c0fc963e08e8b9d0c13d88404e3b43b1852ef71eda19afa3"
+        }
+    ]
+},
+{
+    "name": "python2-pyaml",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip2 install --no-index --find-links=\"file://${PWD}\" --target=/usr/lib/python2.7/site-packages/ pyaml"
+    ],
+    "sources": [
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/4a/85/db5a2df477072b2902b0eb892feb37d88ac635d36245a72a6a69b23b383a/PyYAML-3.12.tar.gz",
+            "sha256": "592766c6303207a20efc445587778322d7f73b161bd994f227adaa341ba212ab"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/9e/17/1d4ed6e1a4c0918a0357dfa2fdbe26bf63f6e616013c04a14bce9fd33e40/pyaml-17.12.1.tar.gz",
+            "sha256": "66623c52f34d83a2c0fc963e08e8b9d0c13d88404e3b43b1852ef71eda19afa3"
+        }
+    ]
+},
+{
+    "name": "python2-subprocess32",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip2 install --target=/usr/lib/python2.7/site-packages/ ."
+    ],
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://files.pythonhosted.org/packages/be/2b/beeba583e9877e64db10b52a96915afc0feabf7144dcbf2a0d0ea68bf73d/subprocess32-3.5.3.tar.gz",
+            "sha256": "6bc82992316eef3ccff319b5033809801c0c3372709c5f6985299c88ac7225c3"
+        }
+    ]
+},
+{
+    "name": "python2-virtualenv",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip2 install --no-index --find-links=\"file://${PWD}\" --target=/usr/lib/python2.7/site-packages/ virtualenv",
+        "ln -s /usr/lib/python2.7/site-packages/virtualenv.py /usr/bin/virtualenv",
+        "chmod +x /usr/bin/virtualenv"
+    ],
+    "sources": [
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/33/bc/fa0b5347139cd9564f0d44ebd2b147ac97c36b2403943dbee8a25fd74012/virtualenv-16.0.0.tar.gz",
+            "sha256": "ca07b4c0b54e14a91af9f34d0919790b016923d157afda5efdde55c96718f752"
+        }
+    ]
+},
+{
+    "name": "python2-pycairo",
+    "buildsystem": "simple",
+    "build-commands": [
+        "python2 setup.py install --prefix=/usr"
+    ],
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://pypi.python.org/packages/ef/97/b33dc533ea6076d4ea9cbd2fe049a2b4a3df5c5b6fba9a182616f6f8d310/pycairo-1.15.4.tar.gz",
+            "sha256": "ee4c3068c048230e5ce74bb8994a024711129bde1af1d76e3276c7acd81c4357"
+        }
+    ],
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig"
+    ]
+},
+{
+    "name": "python2-gobject",
+    "build-options": {
+        "env": {
+            "PYTHON": "/usr/bin/python2"
+        }
+    },
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://download.gnome.org/sources/pygobject/3.28/pygobject-3.28.1.tar.xz",
+            "sha256": "42312b4a5015571fa0a4f2d201005da46b71c251ea2625bc95702d071c4ff895"
+        }
+    ],
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig"
+    ]
+},
+{
+    "name": "python2-six",
+    "buildsystem": "simple",
+    "build-commands": [
+        "python2 setup.py install --prefix=/usr"
+    ],
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://files.pythonhosted.org/packages/94/3e/edcf6fef41d89187df7e38e868b2dd2182677922b600e880baad7749c865/six-1.13.0.tar.gz",
+            "sha256": "30f610279e8b2578cab6db20741130331735c781b56053c59c4076da27f06b66"
+        }
+    ]
+},
