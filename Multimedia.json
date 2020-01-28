@@ -37,8 +37,7 @@
         {
             "type": "git",
             "url": "https://github.com/sctplab/usrsctp.git",
-            "branch": "master",
-            "commit": "49dea54aef5f6994bed75d3214b8ade1b971f293"
+            "commit": "17983b032c3f0e33523972e534b18df832922800"
         }
     ],
     "config-opts": [
