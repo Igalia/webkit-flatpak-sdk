@@ -1,12 +1,25 @@
 {
+    "name": "libzstd",
+    "buildsystem": "meson",
+    "subdir": "build/meson",
+    "sources": [
+        {
+            "type": "git",
+            "url": "https://github.com/facebook/zstd",
+            "tag": "v1.4.4",
+            "commit": "10f0e6993f9d2f682da6d04aa2385b7d53cbb4ee"
+        }
+    ]
+},
+{
     "name": "icecc",
     "sources": [
         {
             "type": "git",
             "url": "https://github.com/icecc/icecream",
-            "tag": "1.2",
-            "commit": "e3d10a32bc6c046d8f3d1182e75c659d4b28ed49"
-            }
+            "tag": "1.3",
+            "commit": "aa9e2fc68ee045f7fb55dab853f1cf58a80d2952"
+        }
     ],
     "config-opts": [
         "--without-man"
