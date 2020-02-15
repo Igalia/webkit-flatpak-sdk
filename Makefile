@@ -6,6 +6,9 @@ GPG_KEY=9A0495AF96828F9D5E032C46A9A60744BCE3F878
 RSYNC_HOST=software.igalia.com
 RSYNC_REMOTE_DIR=/var/www/software/webkit-sdk-repo
 
+# Example for this variable: --disable-updates
+EXTRA_FLATPAK_OPTS?=
+
 all: build
 
 org.webkit.Sdk.json: org.webkit.Sdk.json.in Base.json DisplayServer.json Misc.json Multimedia.json Python.json Qt5.json TestInfra.json WPEModules.json
@@ -13,7 +16,7 @@ org.webkit.Sdk.json: org.webkit.Sdk.json.in Base.json DisplayServer.json Misc.js
 
 build: org.webkit.Sdk.json
 	flatpak --user remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-	flatpak-builder --user --install-deps-from=flathub --force-clean --ccache --require-changes --repo=${REPO_DIR} --arch=${ARCH} --subject="WebKit developer flatpak SDK/Runtime, `date`" ${BUILD_DIR} $<
+	flatpak-builder ${EXTRA_FLATPAK_OPTS} --user --install-deps-from=flathub --force-clean --ccache --require-changes --repo=${REPO_DIR} --arch=${ARCH} --subject="WebKit developer flatpak SDK/Runtime, `date`" ${BUILD_DIR} $<
 
 sign-repo:
 	flatpak build-sign ${REPO_DIR} --gpg-sign=${GPG_KEY} --gpg-homedir=gpg
