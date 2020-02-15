@@ -20,10 +20,10 @@ sign-repo:
 	flatpak build-update-repo ${REPO_DIR} --gpg-sign=${GPG_KEY} --gpg-homedir=gpg --generate-static-deltas
 
 pull-repo:
-	rsync -avz ${RSYNC_HOST}:${RSYNC_REMOTE_DIR}/ ${REPO_DIR}
+	./ostree-releng-scripts/rsync-repos --rsync-opts vz --src ${RSYNC_HOST}:${RSYNC_REMOTE_DIR}/ --dest ${REPO_DIR}
 
 push-repo: sign-repo
-	rsync -avz ${REPO_DIR}/ ${RSYNC_HOST}:${RSYNC_REMOTE_DIR}
+	./ostree-releng-scripts/rsync-repos --rsync-opts vz --src ${REPO_DIR}/ --dest ${RSYNC_HOST}:${RSYNC_REMOTE_DIR}
 
 sdk-debug-shell: org.webkit.Sdk.json
 	flatpak-builder --run ${BUILD_DIR} $< sh
