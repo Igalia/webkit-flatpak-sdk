@@ -80,6 +80,7 @@
 #include "WPEModules.json"
 #include "TestInfra.json"
 #include "Multimedia.json"
+#include "Rust.json"
         {
             "name": "os-release",
             "post-install": [

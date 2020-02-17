@@ -1,0 +1,25 @@
+{
+    "name": "sccache",
+    "buildsystem": "simple",
+    "build-options": {
+        "env": {
+            "CARGO_HOME": "/run/build-runtime/sccache/cargo",
+            "LD_LIBRARY_PATH": "/usr/lib/sdk/rust-stable/lib"
+        },
+        "append-path" : "/usr/lib/sdk/rust-stable/bin"
+    },
+    "build-commands": [
+        "cargo --offline fetch",
+        "cargo --offline build --features=all --release",
+        "strip ./target/release/sccache",
+        "install -D -m a+rx ./target/release/sccache /usr/bin"
+    ],
+    "sources": [
+        {
+            "type": "git",
+            "url": "https://github.com/mozilla/sccache",
+            "tag": "0.2.12"
+        },
+#include "generated-sccache-0.2.12.json"
+    ]
+},

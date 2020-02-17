@@ -1,4 +1,5 @@
 
+MODULES=Base.json DisplayServer.json Misc.json Multimedia.json Python.json Qt5.json TestInfra.json WPEModules.json Rust.json $(wildcard generated*.json)
 ARCH?=$(shell flatpak --default-arch)
 BUILD_DIR=sdk
 REPO_DIR=repo
@@ -11,7 +12,7 @@ EXTRA_FLATPAK_OPTS?=
 
 all: build
 
-org.webkit.Sdk.json: org.webkit.Sdk.json.in Base.json DisplayServer.json Misc.json Multimedia.json Python.json Qt5.json TestInfra.json WPEModules.json
+org.webkit.Sdk.json: org.webkit.Sdk.json.in $(MODULES)
 	cpp -P org.webkit.Sdk.json.in | sed "s,@@SDK_ARCH@@,$(ARCH),g" > $@
 
 build: org.webkit.Sdk.json
