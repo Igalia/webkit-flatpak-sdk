@@ -83,14 +83,7 @@
         {
             "name": "os-release",
             "post-install": [
-                "mkdir -p /usr/share/runtime/lib/plugins/",
-                "mkdir -p /usr/lib/ccache",
-                "ln -s /usr/bin/ccache /usr/lib/ccache/cc",
-                "ln -s /usr/bin/ccache /usr/lib/ccache/c++",
-                "ln -s /usr/bin/ccache /usr/lib/ccache/clang",
-                "ln -s /usr/bin/ccache /usr/lib/ccache/clang++",
-                "ln -s /usr/bin/ccache /usr/lib/ccache/gcc",
-                "ln -s /usr/bin/ccache /usr/lib/ccache/g++"
+                "mkdir -p /usr/share/runtime/lib/plugins/"
             ],
             "sources": [
                 {
