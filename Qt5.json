@@ -48,8 +48,8 @@
     "sources": [
         {
             "type": "archive",
-            "url": "http://download.qt.io/archive/qt/5.14/5.14.0/submodules/qtbase-everywhere-src-5.14.0.tar.xz",
-            "sha256": "4ef921c0f208a1624439801da8b3f4344a3793b660ce1095f2b7f5c4246b9463"
+            "url": "http://download.qt.io/archive/qt/5.14/5.14.1/submodules/qtbase-everywhere-src-5.14.1.tar.xz",
+            "sha256": "d9d423a6e7bcf1055c0372fc029f14a6fe67dd62c67b83095cde68b60b762cf7"
         },
         {
             "type": "patch",
@@ -58,6 +58,11 @@
         {
             "type": "patch",
             "path": "qt-patches/qtbase-use-wayland-on-gnome.patch"
+        },
+        {
+            "//TODO": "Temporary fix for https://github.com/flatpak/flatpak/issues/3397.",
+            "type": "patch",
+            "path": "qt-patches/qtbase-revert-correct-handling-for-xdg-runtime-dir.patch"
         },
         {
             "type": "shell",
@@ -80,16 +85,13 @@
     "sources": [
         {
             "type": "archive",
-            "url": "http://download.qt.io/archive/qt/5.14/5.14.0/submodules/qtdeclarative-everywhere-src-5.14.0.tar.xz",
-            "sha256": "bbf11ee33d6f0d6bd6c4dc641d4f2aafbc7c6cd3b421a658955302d441dc9d8e"
+            "url": "http://download.qt.io/archive/qt/5.14/5.14.1/submodules/qtdeclarative-everywhere-src-5.14.1.tar.xz",
+            "sha256": "762fe495d2f97fd70f06dc7d3929506ea3b5e3151ad813e0629209b7bc504c8a"
         },
         {
             "type": "patch",
             "path": "qt-patches/qtdeclarative-use-python3.patch"
         }
-    ],
-    "ensure-writable": [
-        "/include/QtQml/5.14.0/QtQml/private/"
     ]
 },
 {
@@ -99,8 +101,8 @@
     "sources": [
         {
             "type": "archive",
-            "url": "http://download.qt.io/archive/qt/5.14/5.14.0/submodules/qtquickcontrols-everywhere-src-5.14.0.tar.xz",
-            "sha256": "6dd477bcb36a94ab417faab5e607f7a07c217c4ca3f751d8d76d475ab0f3558e"
+            "url": "http://download.qt.io/archive/qt/5.14/5.14.1/submodules/qtquickcontrols-everywhere-src-5.14.1.tar.xz",
+            "sha256": "54519e7c6748bb9af46435a7ba2ce1c53e4ad164a70e88915fe0e61277540a1a"
         }
     ]
 },
@@ -111,8 +113,8 @@
     "sources": [
         {
             "type": "archive",
-            "url": "http://download.qt.io/archive/qt/5.14/5.14.0/submodules/qtquickcontrols2-everywhere-src-5.14.0.tar.xz",
-            "sha256": "827bf86db44ce4f698f172378313db04e1cb81c593e9342bdd95bb1708f27911"
+            "url": "http://download.qt.io/archive/qt/5.14/5.14.1/submodules/qtquickcontrols2-everywhere-src-5.14.1.tar.xz",
+            "sha256": "52d652c48933cc8416a91138eb6fb4c31625734265671f286b6c0d3e27d120ae"
         }
     ]
 },
@@ -123,8 +125,8 @@
     "sources": [
         {
             "type": "archive",
-            "url": "http://download.qt.io/archive/qt/5.14/5.14.0/submodules/qtwayland-everywhere-src-5.14.0.tar.xz",
-            "sha256": "32d4fadb3a8dcee8953e6d92ee567927cd7649be6fc8dd378480664902c22610"
+            "url": "http://download.qt.io/archive/qt/5.14/5.14.1/submodules/qtwayland-everywhere-src-5.14.1.tar.xz",
+            "sha256": "2a03b9f554e88c5824ef237c814b3dd45844c022e97be0e091f4a502ca4c9520"
         },
         {
             "type": "patch",
@@ -139,8 +141,8 @@
     "sources": [
         {
             "type": "archive",
-            "url": "http://download.qt.io/archive/qt/5.14/5.14.0/submodules/qtx11extras-everywhere-src-5.14.0.tar.xz",
-            "sha256": "7a06de3b49d34b72fa773800f049c06c04c51eb3440833779f1e9300a94947b1"
+            "url": "http://download.qt.io/archive/qt/5.14/5.14.1/submodules/qtx11extras-everywhere-src-5.14.1.tar.xz",
+            "sha256": "b268907deb06570671c1f584feb1508e7fded129209a268183decc122bfac181"
         }
     ]
 },

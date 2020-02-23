@@ -25,7 +25,7 @@
             "directory": "share/runtime/lib/plugins/",
             "subdirectories": true,
             "no-autodownload": true,
-            "version": "5.13",
+            "version": "5.14",
             "merge-dirs": "styles",
             "download-if": "active-gtk-theme"
         },
@@ -33,7 +33,7 @@
             "directory": "share/runtime/lib/plugins/",
             "subdirectories": true,
             "no-autodownload": true,
-            "version": "5.13",
+            "version": "5.14",
             "merge-dirs": "platformthemes",
             "//TODO": "This is currently only used for gnome platform plugin and should be its own extension point",
             "download-if": "on-xdg-desktop-GNOME;on-xdg-desktop-GNOME-classic"
@@ -42,17 +42,16 @@
             "directory": "share/runtime/lib/plugins/",
             "subdirectories": true,
             "no-autodownload": true,
-            "version": "5.13",
+            "version": "5.14",
             "merge-dirs": "wayland-decoration-client",
             "//TODO": "This is currently only used for gnome platform plugin and should be its own extension point",
             "download-if": "on-xdg-desktop-GNOME;on-xdg-desktop-GNOME-classic"
         }
     },
     "finish-args": [
-        "--env=XDG_DATA_DIRS=/usr/share:/usr/share/runtime/share:/run/host/share",
-        "--env=QT_PLUGIN_PATH=/usr/share/runtime/lib/plugins",
-        "--env=PATH=/usr/lib/ccache:/usr/bin",
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
+        "--env=XDG_DATA_DIRS=/app/share:/usr/share:/usr/share/runtime/share:/run/host/share",
+        "--env=QT_PLUGIN_PATH=/app/lib64/plugins:/app/lib/plugins:/usr/share/runtime/lib/plugins",
+        "--env=QML2_IMPORT_PATH=/app/lib64/qml:/app/lib/qml",
         "--filesystem=xdg-config/kdeglobals:ro",
         "--filesystem=xdg-run/dconf",
         "--filesystem=~/.config/dconf:ro",
@@ -60,6 +59,7 @@
     ],
     "cleanup": [ "/cache",
                  "/man",
+                 "/share/man",
                  "*.la" ],
     "cleanup-commands": [ "/usr/libexec/freedesktop-post.sh" ],
     "cleanup-platform": [ "/share/runtime/docs",
