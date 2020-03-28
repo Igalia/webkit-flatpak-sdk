@@ -1,0 +1,17 @@
+#!/bin/sh
+
+files_list=$(git diff --cached --name-only --diff-filter=ACM)
+
+for file in $files_list; do
+	file_head=$(head -n1 $file)
+	git check-ignore -q --no-index $file
+	file_check_ignore=$?
+	if [ $file_check_ignore -eq 0 ] && [ "$file_head" == "# no-commit" ]; then
+	    cat <<EOF
+Error: Attempt to commit a file marked no-commit.
+
+Unstage '$file' and try again.
+EOF
+		exit 1
+	fi
+done
