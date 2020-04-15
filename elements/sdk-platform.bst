@@ -25,6 +25,7 @@ depends:
 - sdk/gst-plugins-ugly.bst
 - sdk/gstreamer.bst
 - sdk/gtk+-3.bst
+- sdk/gtk.bst
 - sdk/icecc.bst
 - sdk/intltool.bst
 - sdk/krb5.bst
