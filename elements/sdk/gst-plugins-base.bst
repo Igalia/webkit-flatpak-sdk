@@ -14,6 +14,7 @@ build-depends:
 depends:
 - freedesktop-sdk.bst:components/gdk-pixbuf.bst
 - sdk/gstreamer.bst
+- sdk/graphene.bst
 - sdk/gtk+-3.bst
 - freedesktop-sdk.bst:components/pango.bst
 - sdk/libsoup.bst
@@ -37,7 +38,6 @@ variables:
     -Dlibvisual=disabled
     -Dtremor=disabled
     -Dexamples=disabled
-    -Dgl-graphene=disabled
     -Dgtk_doc=disabled
     -Dtests=disabled
 
