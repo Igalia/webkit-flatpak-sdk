@@ -10,10 +10,10 @@ build-depends:
 depends:
 - sdk/at-spi2-atk.bst
 - sdk/atk.bst
-- sdk/gdk-pixbuf.bst
+- freedesktop-sdk.bst:components/gdk-pixbuf.bst
 - sdk/glib.bst
 - sdk/gobject-introspection.bst
-- sdk/pango.bst
+- freedesktop-sdk.bst:components/pango.bst
 - freedesktop-sdk.bst:components/cairo.bst
 - freedesktop-sdk.bst:components/hicolor-icon-theme.bst
 - freedesktop-sdk.bst:components/libepoxy.bst

@@ -12,10 +12,10 @@ sources:
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
 depends:
-- sdk/gdk-pixbuf.bst
+- freedesktop-sdk.bst:components/gdk-pixbuf.bst
 - sdk/gstreamer.bst
 - sdk/gtk+-3.bst
-- sdk/pango.bst
+- freedesktop-sdk.bst:components/pango.bst
 - sdk/libsoup.bst
 - freedesktop-sdk.bst:bootstrap-import.bst
 - freedesktop-sdk.bst:components/alsa-lib.bst

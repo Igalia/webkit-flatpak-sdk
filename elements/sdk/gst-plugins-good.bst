@@ -9,7 +9,7 @@ sources:
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
 depends:
-- sdk/gdk-pixbuf.bst
+- freedesktop-sdk.bst:components/gdk-pixbuf.bst
 - sdk/gstreamer.bst
 - sdk/gst-plugins-base.bst
 - sdk/gtk+-3.bst

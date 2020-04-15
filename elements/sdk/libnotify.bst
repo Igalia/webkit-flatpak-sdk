@@ -5,7 +5,7 @@ build-depends:
 
 depends:
 - freedesktop-sdk.bst:bootstrap-import.bst
-- sdk/gdk-pixbuf.bst
+- freedesktop-sdk.bst:components/gdk-pixbuf.bst
 
 sources:
 - kind: tar

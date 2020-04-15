@@ -15,7 +15,6 @@ depends:
 - sdk/brotli.bst
 - sdk/capnp.bst
 - sdk/enchant-2.bst
-- sdk/gdk-pixbuf.bst
 - sdk/glib-networking.bst
 - sdk/glib.bst
 - sdk/graphviz.bst
@@ -43,7 +42,6 @@ depends:
 - sdk/openjpeg.bst
 - sdk/openxr.bst
 - sdk/os-release.bst
-- sdk/pango.bst
 - sdk/pipewire.bst
 - sdk/psmisc.bst
 - sdk/pycairo.bst
@@ -90,6 +88,7 @@ depends:
 - freedesktop-sdk.bst:components/frei0r.bst
 - freedesktop-sdk.bst:components/fribidi.bst
 - freedesktop-sdk.bst:components/gdbm.bst
+- freedesktop-sdk.bst:components/gdk-pixbuf.bst
 - freedesktop-sdk.bst:components/gettext.bst
 - freedesktop-sdk.bst:components/giflib.bst
 - freedesktop-sdk.bst:components/gmp.bst
@@ -172,6 +171,7 @@ depends:
 - freedesktop-sdk.bst:components/orc.bst
 - freedesktop-sdk.bst:components/osmesa.bst
 - freedesktop-sdk.bst:components/p11-kit.bst
+- freedesktop-sdk.bst:components/pango.bst
 - freedesktop-sdk.bst:components/pciutils.bst
 - freedesktop-sdk.bst:components/pcre.bst
 - freedesktop-sdk.bst:components/pcre2.bst
