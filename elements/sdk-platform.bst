@@ -60,6 +60,7 @@ depends:
 - sdk/python2-pycairo.bst
 - sdk/python2-pygobject.bst
 - sdk/libmanette.bst
+- sdk/patchelf.bst
 
 - freedesktop-sdk.bst:integration/mtab.bst
 - freedesktop-sdk.bst:components/alsa-lib.bst
