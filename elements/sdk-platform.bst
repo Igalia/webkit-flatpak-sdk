@@ -31,6 +31,7 @@ depends:
 - sdk/libcap-ng.bst
 - sdk/libevent.bst
 - sdk/libgcrypt.bst
+- sdk/libmanette.bst
 - sdk/libnotify.bst
 - sdk/libsecret.bst
 - sdk/libsoup.bst
@@ -46,21 +47,19 @@ depends:
 - sdk/psmisc.bst
 - sdk/pycairo.bst
 - sdk/pygobject.bst
+- sdk/python2-pycairo.bst
+- sdk/python2-pygobject.bst
+- sdk/python2-six.bst
+- sdk/python2-subprocess32.bst
+- sdk/python2.bst
 - sdk/shared-mime-info.bst
 - sdk/v4lutils.bst
 - sdk/woff2.bst
 - sdk/wpebackend-fdo.bst
 - sdk/x264.bst
 - sdk/xorg-server.bst
-- sdk/python2.bst
-- sdk/python2-six.bst
-- sdk/python2-subprocess32.bst
-- sdk/python2-pycairo.bst
-- sdk/python2-pygobject.bst
-- sdk/libmanette.bst
 - sdk/patchelf.bst
 
-- freedesktop-sdk.bst:integration/mtab.bst
 - freedesktop-sdk.bst:components/alsa-lib.bst
 - freedesktop-sdk.bst:components/alsa-plugins.bst
 - freedesktop-sdk.bst:components/appstream-glib.bst
@@ -238,3 +237,4 @@ depends:
 - freedesktop-sdk.bst:components/xorg-lib-xxf86vm.bst
 - freedesktop-sdk.bst:components/xz.bst
 - freedesktop-sdk.bst:components/zip.bst
+- freedesktop-sdk.bst:integration/mtab.bst
