@@ -5,6 +5,10 @@ sources:
   ref: b13e73e2fe74a4166552f9577c3dcb24bed077021b9c7fa600d910ec6987816a
 - kind: patch
   path: patches/gst-plugins-base-0001-playbin-Handle-error-message-with-redirection-indica.patch
+- kind: patch
+  path: patches/gst-plugins-base-0001-glupload-Fix-fallback-from-direct-dmabuf-to-dmabuf-u.patch
+- kind: patch
+  path: patches/gst-plugins-base-0002-glupload-fix-segfault.patch
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
 depends:
