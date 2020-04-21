@@ -54,6 +54,7 @@ depends:
 - sdk/python2-subprocess32.bst
 - sdk/python2.bst
 - sdk/shared-mime-info.bst
+- sdk/subversion.bst
 - sdk/v4lutils.bst
 - sdk/woff2.bst
 - sdk/wpebackend-fdo.bst
