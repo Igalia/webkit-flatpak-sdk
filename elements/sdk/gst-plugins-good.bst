@@ -24,7 +24,6 @@ depends:
 - freedesktop-sdk.bst:components/libflac.bst
 - freedesktop-sdk.bst:components/libpng.bst
 - freedesktop-sdk.bst:components/libpulse.bst
-- freedesktop-sdk.bst:components/libgudev.bst
 - freedesktop-sdk.bst:components/libvpx.bst
 - freedesktop-sdk.bst:components/mpg123.bst
 - freedesktop-sdk.bst:components/orc.bst
@@ -43,3 +42,4 @@ variables:
     -Dshout2=disabled
     -Dtaglib=disabled
     -Dtwolame=disabled
+    -Dv4l2-gudev=disabled
