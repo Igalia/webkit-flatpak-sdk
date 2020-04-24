@@ -14,6 +14,7 @@ depends:
 - sdk/openjpeg.bst
 - sdk/libusrsctp.bst
 - sdk/libsrtp2.bst
+- sdk-build-depends/libusb.bst
 - filtered-openh264.bst
 - freedesktop-sdk.bst:components/aom.bst
 - freedesktop-sdk.bst:components/librsvg.bst
@@ -100,7 +101,6 @@ variables:
     -Dteletext=disabled
     -Dtinyalsa=disabled
     -Dttml=disabled
-    -Duvch264=disabled
     -Dvaacenc=disabled
     -Dvdpau=disabled
     -Dvoaacenc=disabled
