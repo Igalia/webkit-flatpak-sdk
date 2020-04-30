@@ -1,9 +1,10 @@
 kind: meson
 
 sources:
-- kind: tar
-  url: gnome_downloads:gtk/3.98/gtk-3.98.2.tar.xz
-  ref: ad4d7c7d3a52065029f23cc75d22a467c8c9f02a3bf0abb355ee793b2933fdae
+- kind: git_tag
+  url: gitlab_gnome_org:GNOME/gtk.git
+  track: master
+  ref: 3.24.19-46-ge5c430266e71289765de6d8bfc40166bcbeff4e7
 build-depends:
 - sdk/sassc.bst
 - freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
