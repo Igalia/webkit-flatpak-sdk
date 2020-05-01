@@ -11,6 +11,14 @@ sources:
   path: patches/nettle-no-debug.diff
 - kind: patch
   path: patches/fdo-0001-Update-gcc-to-9.3.0.patch
+- kind: patch
+  path: patches/fdo/0001-components-xdg-desktop-portal.bst-Update-to-1.6.0.patch
+- kind: patch
+  path: patches/fdo/0002-Update-PipeWire-to-0.3.1.patch
+- kind: patch
+  path: patches/fdo/0003-Add-Bluez.patch
+- kind: patch
+  path: patches/fdo/0004-Add-PipeWire-dependencies.patch
 config:
   options:
     target_arch: '%{arch}'

@@ -44,7 +44,6 @@ depends:
 - sdk/openjpeg.bst
 - sdk/openxr.bst
 - sdk/os-release.bst
-- sdk/pipewire.bst
 - sdk/psmisc.bst
 - sdk/pycairo.bst
 - sdk/pygobject.bst
@@ -176,6 +175,7 @@ depends:
 - freedesktop-sdk.bst:components/pciutils.bst
 - freedesktop-sdk.bst:components/pcre.bst
 - freedesktop-sdk.bst:components/pcre2.bst
+- freedesktop-sdk.bst:components/pipewire.bst
 - freedesktop-sdk.bst:components/pixman.bst
 - freedesktop-sdk.bst:components/python3-pip.bst
 - freedesktop-sdk.bst:components/python3-setuptools.bst
