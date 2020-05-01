@@ -48,7 +48,6 @@ config:
       version: "1.4"
       directory: "%{lib}/GL"
       subdirectories: "true"
-      no-autodownload: "true"
       autodelete: "false"
       add-ld-path: "lib"
       merge-dirs: "vulkan/icd.d;glvnd/egl_vendor.d;OpenCL/vendors;lib/dri;lib/d3d;vulkan/explicit_layer.d"
@@ -96,6 +95,12 @@ config:
       autodelete: 'false'
       no-autodownload: 'true'
       download-if: have-intel-gpu
+      version: '%{freedesktop-sdk-flatpak-branch}'
+
+    Extension org.freedesktop.Platform.ffmpeg-full:
+      directory: '%{lib}/ffmpeg'
+      add-ld-path: '.'
+      autodelete: 'false'
       version: '%{freedesktop-sdk-flatpak-branch}'
 
     (?):
