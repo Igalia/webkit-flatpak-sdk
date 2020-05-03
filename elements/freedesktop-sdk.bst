@@ -19,6 +19,17 @@ sources:
   path: patches/fdo/0003-Add-Bluez.patch
 - kind: patch
   path: patches/fdo/0004-Add-PipeWire-dependencies.patch
+- kind: patch
+  path: patches/fdo/0001-ffmpeg-Add-MS-MPEG-DivX-variants.patch
+- kind: patch
+  path: patches/fdo/0002-ffmpeg-Add-VP6-and-Sorenson-Spark-video-codecs.patch
+- kind: patch
+  path: patches/fdo/0003-ffmpeg-Add-Intel-Indeo-and-Cinepak-video-support.patch
+- kind: patch
+  path: patches/fdo/0004-ffmpeg-Add-MPEG-2-video-decoder.patch
+- kind: patch
+  path: patches/fdo/0005-ffmpeg-Add-msmpeg4v3-support.patch
+
 config:
   options:
     target_arch: '%{arch}'
