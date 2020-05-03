@@ -6,7 +6,7 @@ sources:
   track: master
   ref: 3.24.19-46-ge5c430266e71289765de6d8bfc40166bcbeff4e7
 build-depends:
-- sdk/sassc.bst
+- sdk-build-depends/sassc.bst
 - freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
 
 depends:
