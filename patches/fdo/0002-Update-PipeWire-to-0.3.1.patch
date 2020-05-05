@@ -102,7 +102,7 @@ index 685b59f1..4873175b 100644
 -  ref: 0.2.6-0-g4aff470a8fa1e06448b2316781b4e7a91fbda341
 +  exclude:
 +  - '*.*.9*'
-+  ref: 0.3.1-0-g74a1632f0720886d5b3b6c23ee8fcd6c03ca7aac
++  ref: 0.3.4-0-g33398d7de83fad1c67c691e0712e3e0108c5e966
 diff --git a/elements/components/pipewire-daemon.bst b/elements/components/pipewire-daemon.bst
 index 2606d957..92f1c626 100644
 --- a/elements/components/pipewire-daemon.bst
