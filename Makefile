@@ -1,7 +1,6 @@
 ARCH ?= $(shell flatpak --default-arch)
 BOOTSTRAP_ARCH ?= $(shell flatpak --default-arch)
 
-
 GIT ?= git
 
 BST ?= bst
@@ -10,7 +9,6 @@ _BST_ARGS ?= --no-interactive -o arch $(ARCH) -o bootstrap_build_arch $(BOOTSTRA
 
 OSTREE ?= ostree
 
-OUTDIR ?= out
 CACHEDIR ?= cache
 
 REPO ?= repo
@@ -30,7 +28,6 @@ EXPORT_REFS = $(shell [ -d "$(EXPORT_REPO)" ] && $(OSTREE) refs --repo $(EXPORT_
 all: export
 
 clean:
-	if [ -d "$(OUTDIR)" ]; then rmdir $(OUTDIR); fi
 	if [ -d "$(CACHEDIR)" ]; then rmdir $(CACHEDIR); fi
 	if [ -d "$(EXPORT_REPO)" ]; then rm -r $(EXPORT_REPO); fi
 .PHONY: clean
@@ -52,9 +49,6 @@ track:
 	$(BST) $(BST_ARGS) $(_BST_ARGS) track flatpak-runtimes.bst flatpak-platform-extensions.bst --deps=all
 .PHONY: track
 
-
-$(OUTDIR):
-	mkdir -p $@
 
 $(CACHEDIR):
 	mkdir -p $@
