@@ -2,7 +2,7 @@
 To install the WebKit Flatpak SDK run this:
 
 ```shell
-flatpak --user remote-add webkit https://software.igalia.com/webkit-sdk-repo
+flatpak remote-add --user --if-not-exists webkit https://software.igalia.com/flatpak-refs/webkit-sdk.flatpakrepo
 flatpak --user install org.webkit.{Sdk,Platform}
 ```
 
