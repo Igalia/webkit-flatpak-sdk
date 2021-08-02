@@ -1,3 +1,14 @@
+⚠⚠⚠⚠ 
+To install the WebKit Flatpak SDK run this:
+
+```shell
+flatpak --user remote-add webkit https://software.igalia.com/webkit-sdk-repo
+flatpak --user install org.webkit.{Sdk,Platform}
+```
+
+The informations provided below are outdated.
+⚠⚠⚠⚠
+
 # WebKit developer SDK and platform runtime
 
 This repository contains a [BuildStream](https://buildstream.build) project that
